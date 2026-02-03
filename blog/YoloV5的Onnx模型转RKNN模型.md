@@ -65,13 +65,14 @@ sudo docker run hello-world
 ```
 
 如果显示helloworld则代表docker的环境正常，但如果提示：
-![image-20250402235531263](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20250402235531263.png)
+
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/9b4d633d16be4a14a8811926cac4070d.png)
 
 属于正常现象，docker会有问题连接不上，国内全面禁止了docker本源及镜像源，用科学
 
 不过不运行helloworld不影响rknn的转换，略过即可，只要后面的版本等信息输出正常就行：
 
-![image-20250402235702215](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20250402235702215.png)
+![image-20260203172825285](assets/image-20260203172825285.png)
 
 和我的截图差不多就行，不要有报错一般就代表安装成功了。
 
@@ -145,7 +146,7 @@ sudo systemctl start docker
 docker load --input rknn-toolkit2-1.4.0-cp38-docker.tar.gz
 ```
 
-![image-20250403000006955](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20250403000006955.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/43eab1499d564c8c969889c0ab1bd951.png)
 
 
 
@@ -161,7 +162,7 @@ docker run -t -i --privileged -v /dev/bus/usb:/dev/bus/usb -v ~/rknn/rknn-toolki
 ls
 ```
 
-![image-20250403000110854](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20250403000110854.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/e34a6425f66042a8906e8cb550765481.png)
 
 
 
@@ -172,7 +173,7 @@ cd examples/
 ls
 ```
 
-![image-20250403000211536](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20250403000211536.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/442c1519b6ac486d8b783b4748e4a280.png)
 
 正常，进入onnx的yolov5文件夹
 
@@ -187,7 +188,7 @@ cd onnx/yolov5/
  ls
 ```
 
-![image-20250403000357692](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20250403000357692.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/82ce6dab16ed4affb763444b0a0fa112.png)
 
 # 3.生成RKNN模型
 
@@ -217,7 +218,7 @@ infallible_sanderson		docker镜像名字，可用docker ps -a	指令查询
 ls
 ```
 
-![image-20250403001010193](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20250403001010193.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/0b048313f27c441792fe6e5898f48a56.png)
 
 然后我们复制一份dataset.txt
 
@@ -231,7 +232,7 @@ cp dataset.txt mydataset.txt
 vim mydataset.txt
 ```
 
-![image-20250403001052610](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20250403001052610.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/cc5dc337b2fa44328218f0e1e313897f.png)
 
 点击i
 
@@ -243,7 +244,7 @@ vim mydataset.txt
 
 输入wq，按回车保存
 
-![image-20250403001200448](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20250403001200448.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/cc6747a9f3e549c1bbe7e800ea2e44ef.png)
 
 
 
@@ -256,13 +257,11 @@ vim mytest.py
 
 ps:我这里中途换了一个onnx模型和图片，以jzl.onnx和jzl.jpg为例
 
-![image-20250403001554821](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20250403001554821.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/b261f0a1100041fc90c25fd6d596ab79.png)
 
 然后翻到最后
 
-![image-20250403001718910](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20250403001718910.png)
-
-
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/e4426bb78e004e92a11b185ed5d6b0f7.png)
 
 最后esc
 
@@ -278,11 +277,11 @@ wq
 python mytest.py
 ```
 
-![image-20250403001902898](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20250403001902898.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/05f0dd7549b84f9fb6831eb890dd22a6.png)
 
 等待几秒就好
 
-![image-20250403001938357](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20250403001938357.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/3002fc038f3544a6a0305f8aacc2febb.png)
 
 然后查看一下是否导出成功
 
@@ -290,7 +289,7 @@ python mytest.py
 ls
 ```
 
-![image-20250403001956063](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20250403001956063.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/ca3b8680ab244c479d3ae7b3a33b3945.png)
 
 看起来像是成功了，我们将rknn模型和out.jpg拿出来
 
@@ -305,15 +304,15 @@ docker cp infallible_sanderson:/examples/onnx/yolov5/jzl.rknn  /mnt/hgfs/Ubuntu2
 Successfully copied 8.45MB to /mnt/hgfs/Ubuntu20.04/jzl.rknn
 ```
 
-![image-20250403002042561](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20250403002042561.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/e11d9804f3f04a0bb4743d329dcd72a1.png)
 
 回到windows对应的共享文件夹打开
 
-![image-20250403002230735](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20250403002230735.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/a9689eff903242c3ba230dfd2897e630.png)
 
 打开out.jpg看看
 
-![image-20250403002246398](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20250403002246398.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/c610b6e443d04450a3ffd23bfa09b622.png)
 
 效果不错，成功了
 
@@ -343,16 +342,16 @@ https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/20.04/
 
 #### 3.1：onnx版本太高
 
-![image-20250403002617133](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20250403002617133.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/843b15e0cce44147be548bc49e170e94.png)
 
 需注意在使用yolo导出onnx模型的时候，在export.py中的opset属性要写12，写13会导致这里导出rknn报错
 
-![image-20250403002731064](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20250403002731064.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/fafeafe111ce4b5f8ceeb60c2cea2b1d.png)
 
 
 
 #### 3.2模型运行的输入纬度3维与实际要求4维，纬度不符的错误
 
-![image-20250403002830668](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20250403002830668.png)
+![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/ef9f5531789e46ea9768bf840ff8b521.png)
 
-此问题尚未解决，原因未知，但最后生成了RKNN文件，是否能用尚未测试。
+此问题尚未解决，原因未知，但最后生成了RKNN文件，是否能用尚未测试。最后的错误是因为在转换为onnx模型的时候直接展平了参数，需要在yolo.py中修改即可
