@@ -11,7 +11,7 @@ hero:
   # 首页大图 (Hero Image)
   # 你可以准备一张好看的大图（如 avatar.png），也放在 public 文件夹下
   image:
-    src: /avatar.png # 图片路径
+    src: /logo.jpg # 图片路径
     alt: Chuiyu Wiki Logo # 图片描述
 
   # 操作按钮 (Actions)
