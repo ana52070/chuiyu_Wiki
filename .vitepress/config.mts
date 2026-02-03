@@ -14,7 +14,7 @@ export default defineConfig({
 
 
   themeConfig: {
-    logo: '/logo.png',
+    logo: '/logo.jpg',
     nav: [
       { text: '首页', link: '/' },
       // 这里的 link 指向分类文件夹即可，插件会自动处理
