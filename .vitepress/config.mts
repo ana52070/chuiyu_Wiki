@@ -7,10 +7,14 @@ export default defineConfig({
   ignoreDeadLinks: true,
 
   head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'referrer', content: 'no-referrer' }]
   ],
 
+
+
   themeConfig: {
+    logo: '/logo.png',
     nav: [
       { text: '首页', link: '/' },
       // 这里的 link 指向分类文件夹即可，插件会自动处理
@@ -52,7 +56,7 @@ export default defineConfig({
 
     // 👇 在这里加上这段代码：
     outline: {
-      level: [2, 3], // 显示 h2 和 h3 级标题
+      level: [1, 2], // 显示 h1 和 h2 级标题
       label: '页面导航' // 这里可以改标题，比如改成 "目录" 或 "本页内容"
     },
     
