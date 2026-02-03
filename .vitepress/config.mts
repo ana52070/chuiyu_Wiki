@@ -6,6 +6,10 @@ export default defineConfig({
   description: "我的个人技术知识库",
   ignoreDeadLinks: true,
 
+  head: [
+    ['meta', { name: 'referrer', content: 'no-referrer' }]
+  ],
+
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
@@ -45,6 +49,12 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/ana52070/chuiyu_Wiki' }
     ],
+
+    // 👇 在这里加上这段代码：
+    outline: {
+      level: [2, 3], // 显示 h2 和 h3 级标题
+      label: '页面导航' // 这里可以改标题，比如改成 "目录" 或 "本页内容"
+    },
     
     search: {
       provider: 'local'
