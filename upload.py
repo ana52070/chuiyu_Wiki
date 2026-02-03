@@ -3,6 +3,8 @@ import subprocess
 import sys
 import datetime
 
+# 本地测试npm命令：npm run docs:dev
+
 # ================= 配置区域 =================
 # 如果你的梯子端口是 7890 (Clash常见端口)，请修改这里
 # 如果不需要代理，设置为 None
