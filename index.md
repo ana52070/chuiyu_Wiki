@@ -21,7 +21,7 @@ hero:
       link: /blog/ # 跳转到博客列表页
     - theme: alt # 次色按钮
       text: "GitHub 源码"
-      link: https://github.com/你的用户名/你的仓库名
+      link: https://github.com/ana52070/chuiyu_Wiki
 
 # 2️⃣ 特性卡片区域 (Features Section)
 # 可以在这里列出你网站的几个主要亮点或板块
