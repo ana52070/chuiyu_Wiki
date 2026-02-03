@@ -66,7 +66,7 @@ sudo docker run hello-world
 
 如果显示helloworld则代表docker的环境正常，但如果提示：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/9b4d633d16be4a14a8811926cac4070d.png)
+![image-20260203174825485](assets/image-20260203174825485.png)
 
 属于正常现象，docker会有问题连接不上，国内全面禁止了docker本源及镜像源，用科学
 
@@ -146,7 +146,7 @@ sudo systemctl start docker
 docker load --input rknn-toolkit2-1.4.0-cp38-docker.tar.gz
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/43eab1499d564c8c969889c0ab1bd951.png)
+![image-20260203174848206](assets/image-20260203174848206.png)
 
 
 
@@ -162,9 +162,9 @@ docker run -t -i --privileged -v /dev/bus/usb:/dev/bus/usb -v ~/rknn/rknn-toolki
 ls
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/e34a6425f66042a8906e8cb550765481.png)
 
 
+![image-20260203174858776](assets/image-20260203174858776.png)
 
 进入examples文件夹查看一下我们的onnx模型在不在
 
@@ -173,7 +173,7 @@ cd examples/
 ls
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/442c1519b6ac486d8b783b4748e4a280.png)
+![image-20260203174907693](assets/image-20260203174907693.png)
 
 正常，进入onnx的yolov5文件夹
 
@@ -188,7 +188,7 @@ cd onnx/yolov5/
  ls
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/82ce6dab16ed4affb763444b0a0fa112.png)
+![image-20260203174915688](assets/image-20260203174915688.png)
 
 # 3.生成RKNN模型
 
@@ -218,7 +218,7 @@ infallible_sanderson		docker镜像名字，可用docker ps -a	指令查询
 ls
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/0b048313f27c441792fe6e5898f48a56.png)
+![image-20260203174925542](assets/image-20260203174925542.png)
 
 然后我们复制一份dataset.txt
 
@@ -232,7 +232,7 @@ cp dataset.txt mydataset.txt
 vim mydataset.txt
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/cc5dc337b2fa44328218f0e1e313897f.png)
+![image-20260203174934566](assets/image-20260203174934566.png)
 
 点击i
 
@@ -244,7 +244,7 @@ vim mydataset.txt
 
 输入wq，按回车保存
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/cc6747a9f3e549c1bbe7e800ea2e44ef.png)
+![image-20260203174942114](assets/image-20260203174942114.png)
 
 
 
@@ -257,11 +257,11 @@ vim mytest.py
 
 ps:我这里中途换了一个onnx模型和图片，以jzl.onnx和jzl.jpg为例
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/b261f0a1100041fc90c25fd6d596ab79.png)
+![image-20260203174950495](assets/image-20260203174950495.png)
 
 然后翻到最后
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/e4426bb78e004e92a11b185ed5d6b0f7.png)
+![image-20260203174958996](assets/image-20260203174958996.png)
 
 最后esc
 
@@ -277,11 +277,11 @@ wq
 python mytest.py
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/05f0dd7549b84f9fb6831eb890dd22a6.png)
+![image-20260203175007944](assets/image-20260203175007944.png)
 
 等待几秒就好
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/3002fc038f3544a6a0305f8aacc2febb.png)
+![image-20260203175018499](assets/image-20260203175018499.png)
 
 然后查看一下是否导出成功
 
@@ -289,7 +289,7 @@ python mytest.py
 ls
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/ca3b8680ab244c479d3ae7b3a33b3945.png)
+![image-20260203175025192](assets/image-20260203175025192.png)
 
 看起来像是成功了，我们将rknn模型和out.jpg拿出来
 
@@ -304,15 +304,15 @@ docker cp infallible_sanderson:/examples/onnx/yolov5/jzl.rknn  /mnt/hgfs/Ubuntu2
 Successfully copied 8.45MB to /mnt/hgfs/Ubuntu20.04/jzl.rknn
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/e11d9804f3f04a0bb4743d329dcd72a1.png)
+![image-20260203175033366](assets/image-20260203175033366.png)
 
 回到windows对应的共享文件夹打开
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/a9689eff903242c3ba230dfd2897e630.png)
+![image-20260203175044171](assets/image-20260203175044171.png)
 
 打开out.jpg看看
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/c610b6e443d04450a3ffd23bfa09b622.png)
+![image-20260203175051578](assets/image-20260203175051578.png)
 
 效果不错，成功了
 
@@ -342,11 +342,11 @@ https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/20.04/
 
 #### 3.1：onnx版本太高
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/843b15e0cce44147be548bc49e170e94.png)
+![image-20260203175059895](assets/image-20260203175059895.png)
 
 需注意在使用yolo导出onnx模型的时候，在export.py中的opset属性要写12，写13会导致这里导出rknn报错
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/fafeafe111ce4b5f8ceeb60c2cea2b1d.png)
+![image-20260203175108018](assets/image-20260203175108018.png)
 
 
 
