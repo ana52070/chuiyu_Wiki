@@ -142,11 +142,11 @@ RX_ADDR_P5(接收地址5)
 
 ## 1.STM32简介
 
-![image-20231121164546882](./assets/image-20231121164546882.png)
+![](assets/20260204123155.png)
 
 ## 2.ARM架构
 
-![image-20231121164706190](./assets/image-20231121164706190.png)
+![](assets/20260204123209.png)
 
 
 
@@ -154,11 +154,11 @@ RX_ADDR_P5(接收地址5)
 
 ### 1.简介
 
-![image-20231121165209911](./assets/image-20231121165209911.png)
+![](assets/20260204123250.png)
 
 ### 2.片上资源
 
-<img src="./assets/image-20231121165356318.png" alt="image-20231121165356318" style="zoom:25%;" />
+![](assets/20260204123300.png)
 
 ​	PS：C8T6芯片不存在最后四项外设
 
@@ -166,13 +166,13 @@ RX_ADDR_P5(接收地址5)
 
 ## 3.命名规则
 
-![image-20231121170222998](./assets/image-20231121170222998.png)
+![](assets/20260204123309.png)
 
 
 
 ## 4.系统结构
 
-![image-20231121170247958](./assets/image-20231121170247958.png)
+![](assets/20260204123317.png)
 
 ​	PS：了解即可
 
@@ -180,7 +180,7 @@ RX_ADDR_P5(接收地址5)
 
 ## 5.引脚定义
 
-![image-20231121183523255](./assets/image-202311211835232255.png)
+![](assets/20260204123326.png)
 
 
 
@@ -188,7 +188,7 @@ RX_ADDR_P5(接收地址5)
 
 ## 6.启动配置
 
-![image-20231121171547930](./assets/image-20231121171547830.png)
+![](assets/20260204123335.png)
 
 ​		启动配置的作用就是指定程序开始运行的位置。一般情况下，程序都是在FLASH程序存储器里开始执行，但是在某些情况下，我们也可以让程序在别的地方开始执行，用以完成特殊的功能。
 
@@ -206,15 +206,15 @@ RX_ADDR_P5(接收地址5)
 
 ## 7.最小系统电路
 
-![image-20231121172231410](./assets/image-20231121172231410.png)
+![](assets/20260204123342.png)
 
 
 
 ## 8.最小系统板实物图
 
-![image-20231121173000230](./assets/image-20231121173000230.png)
+![](assets/20260204123351.png)
 
-![image-20231121173058303](./assets/image-20231121173058303.png)
+
 
 
 
@@ -224,7 +224,7 @@ RX_ADDR_P5(接收地址5)
 
 ## 1.安装目录
 
-![image-20231121173305767](./assets/image-20231121173305767.png)
+![](assets/20260204123358.png)
 
 ## 2.安装链接
 
@@ -286,7 +286,7 @@ RX_ADDR_P5(接收地址5)
 
 #### 接线图：STM32与STLINK
 
-![image-20231121193735562](../../../../AppData/Roaming/Typora/typora-user-images/image-20231121193735562.png)
+![](assets/20260204123410.png)
 
 
 
@@ -338,13 +338,13 @@ int main(void)
 
 ​	以下这些就是新建工程的启动文件：
 
-​	![image-20231121202321533](../../../../AppData/Roaming/Typora/typora-user-images/image-20231121202321533.png)
+​	![](assets/20260204123438.png)
 
 
 
 下面是启动文件的选择：
 
-![image-20231121202354983](../../../../AppData/Roaming/Typora/typora-user-images/image-20231121202354983.png)
+![](assets/20260204123443.png)
 
 
 
@@ -352,11 +352,11 @@ int main(void)
 
 #### 	1.步骤总结
 
-![image-20231121202551085](../../../../AppData/Roaming/Typora/typora-user-images/image-20231121202551085.png)
+![](assets/20260204123449.png)
 
-####	 2.工程架构
+#### 2.工程架构
 
-![image-20231121203004831](../../../../AppData/Roaming/Typora/typora-user-images/image-20231121203004831.png)
+![](assets/20260204123458.png)
 
 
 
@@ -472,7 +472,7 @@ void GPIO_PinRemapConfig(uint32_t GPIO_Remap, FunctionalState NewState);
 
 ### 1.GPIO简介
 
-![image-20231122154223871](../../../../AppData/Roaming/Typora/typora-user-images/image-20231122154223871.png)
+![](assets/20260204123509.png)
 
 ​	输出模式下如果是控制功率比较大的元器件，则需要加入驱动电路，例如电机。与此同时，输出模式还可以用以模拟通信协议，比如IIC，SPI或者某个芯片特定的协议。
 
@@ -484,7 +484,7 @@ void GPIO_PinRemapConfig(uint32_t GPIO_Remap, FunctionalState NewState);
 
 #### 整体结构
 
-![image-20231122154754633](../../../../AppData/Roaming/Typora/typora-user-images/image-20231122154754633.png)
+![](assets/20260204123515.png)
 
 ##### 每个GPIO中：
 
@@ -502,13 +502,13 @@ void GPIO_PinRemapConfig(uint32_t GPIO_Remap, FunctionalState NewState);
 
 下图是STM32参考手册中的GPIO位结构电路图：
 
-![image-20231122155539557](../../../../AppData/Roaming/Typora/typora-user-images/image-20231122155539557.png)
+![](assets/20260204123521.png)
 
 
 
 ## 2.GPIO模式
 
-![image-20231122161048554](../../../../AppData/Roaming/Typora/typora-user-images/image-20231122161048554.png)
+![](assets/20260204123526.png)
 
 
 
@@ -516,7 +516,7 @@ void GPIO_PinRemapConfig(uint32_t GPIO_Remap, FunctionalState NewState);
 
 #### 浮空/上拉/下拉输入模式
 
-![image-20231122161421349](../../../../AppData/Roaming/Typora/typora-user-images/image-20231122161421349.png)
+![](assets/20260204123533.png)
 
 ​			前三种输入模式的电路基本是一样的，区别就是上拉电阻和下拉电阻的连接。
 
@@ -530,7 +530,7 @@ void GPIO_PinRemapConfig(uint32_t GPIO_Remap, FunctionalState NewState);
 
 ​	可以说是ADC数模转换器的专属配置了，下面是其结构：
 
-![image-20231122162008056](../../../../AppData/Roaming/Typora/typora-user-images/image-20231122162008056.png)
+![](assets/20260204123540.png)
 
 ​	PS：上图画X的部分就是没用到的部分。
 
@@ -548,7 +548,7 @@ void GPIO_PinRemapConfig(uint32_t GPIO_Remap, FunctionalState NewState);
 
 下面是电路图：
 
-![image-20231122162349193](../../../../AppData/Roaming/Typora/typora-user-images/image-20231122162349193.png)
+![](assets/20260204123546.png)
 
 ​	此时，输出是由输出数据寄存器控制的。
 
@@ -570,7 +570,7 @@ void GPIO_PinRemapConfig(uint32_t GPIO_Remap, FunctionalState NewState);
 
 ​	下面是电路图：
 
-![image-20231122163102459](../../../../AppData/Roaming/Typora/typora-user-images/image-20231122163102459.png)
+![](assets/20260204123554.png)
 
 ​	同时普通的输入也是有效的，顺便接收一下电平信号。
 
@@ -590,11 +590,11 @@ void GPIO_PinRemapConfig(uint32_t GPIO_Remap, FunctionalState NewState);
 
 ​	介绍：
 
-![image-20231122163655335](../../../../AppData/Roaming/Typora/typora-user-images/image-20231122163655335.png)
+![](assets/20260204123600.png)
 
 ​	接入STM32的硬件电路图：
 
-![image-20231122163906179](../../../../AppData/Roaming/Typora/typora-user-images/image-20231122163906179.png)
+![](assets/20260204123606.png)
 
 ​		左边两图为使用STM32的GPIO口驱动LED的电路
 
@@ -616,7 +616,7 @@ void GPIO_PinRemapConfig(uint32_t GPIO_Remap, FunctionalState NewState);
 
 #### 2.面包板
 
-![image-20231122165415949](../../../../AppData/Roaming/Typora/typora-user-images/image-20231122165415949.png)
+![](assets/20260204123612.png)
 
 ​		略
 
