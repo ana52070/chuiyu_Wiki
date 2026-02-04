@@ -1,7 +1,11 @@
 ---
-title: UV-python环境管理工具 入门教程
+categories:
+- python
 date: 最新推荐文章于 2026-01-05
-tags: [CSDN搬运]
+tags:
+- python
+title: UV-python环境管理工具 入门教程
+permalink: /blog/python/UV-python环境管理工具_入门教程
 ---
 
 # UV-python环境管理工具 入门教程

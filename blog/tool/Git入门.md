@@ -1,3 +1,12 @@
+---
+title: Git入门
+date: '2026-02-04 14:13:40'
+permalink: /blog/tool/Git入门
+categories:
+- tool
+tags:
+- tool
+---
 # Git入门学习
 ## 新建代码仓库
 

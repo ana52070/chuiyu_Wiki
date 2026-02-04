@@ -1,7 +1,11 @@
 ---
-title: EMQX开源版安装指南：Linux/Windows全攻略
+categories:
+- tool
 date: 最新推荐文章于 2025-12-17
-tags: [CSDN搬运]
+tags:
+- tool
+title: EMQX开源版安装指南：Linux/Windows全攻略
+permalink: /blog/tool/EMQX开源版安装指南：LinuxWindows全攻略
 ---
 
 # EMQX开源版安装指南：Linux/Windows全攻略

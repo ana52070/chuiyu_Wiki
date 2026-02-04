@@ -1,7 +1,11 @@
 ---
-title: YoloV11的pt模型转rknn模型适用于RK3588等系列
+categories:
+- yolo
 date: 于 2026-01-12
-tags: [CSDN搬运]
+tags:
+- yolo
+title: YoloV11的pt模型转rknn模型适用于RK3588等系列
+permalink: /blog/yolo/YoloV11的pt模型转rknn模型适用于RK3588等系列
 ---
 
 # YoloV11的pt模型转rknn模型适用于RK3588等系列

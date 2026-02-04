@@ -1,9 +1,13 @@
 ---
-title: rk3588-yolov11-obb_detect_python
-date: 2026-02-04
 author: ana52070
-tags: [GitHub项目]
+categories:
+- 嵌入式Linux项目
+date: 2026-02-04
 description: 暂无描述
+tags:
+- 嵌入式Linux项目
+title: rk3588-yolov11-obb_detect_python
+permalink: /projects/嵌入式Linux项目/rk3588-yolov11-obb_detect_python
 ---
 
 # rk3588-yolov11-obb_detect_python

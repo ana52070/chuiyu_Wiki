@@ -1,7 +1,11 @@
 ---
-title: Ubuntu安装CH340驱动教程
+categories:
+- Linux
 date: 最新推荐文章于 2025-12-22
-tags: [CSDN搬运]
+tags:
+- Linux
+title: Ubuntu安装CH340驱动教程
+permalink: /blog/Linux/Ubuntu安装CH340驱动教程
 ---
 
 # Ubuntu安装CH340驱动教程

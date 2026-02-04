@@ -1,7 +1,11 @@
 ---
-title: RK3588从数据集到训练到部署YoloV8
+categories:
+- yolo
 date: 最新推荐文章于 2025-12-18
-tags: [CSDN搬运]
+tags:
+- yolo
+title: RK3588从数据集到训练到部署YoloV8
+permalink: /blog/yolo/RK3588从数据集到训练到部署YoloV8
 ---
 
 # RK3588从数据集到训练到部署YoloV8

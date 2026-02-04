@@ -1,3 +1,12 @@
+---
+title: 大语言模型培训课_ZXZC25
+date: '2026-02-04 14:27:51'
+permalink: /blog/ai/大语言模型培训课_ZXZC25
+categories:
+- ai
+tags:
+- ai
+---
 # 大语言模型培训课_ZXZC25
 ### 1.大语言模型介绍
 

@@ -1,3 +1,13 @@
+---
+title: 基于 RK3588 的码头门机抓斗智能视觉追踪系统
+date: 2026-02-04
+tags:
+- 嵌入式Linux项目
+categories:
+- 嵌入式Linux项目
+permalink: /projects/嵌入式Linux项目/AI自动跟踪摄像系统
+---
+
 # 基于 RK3588 的码头门机抓斗智能视觉追踪系统
 
 Git仓库链接：暂无

@@ -1,9 +1,13 @@
 ---
-title: jy901_for_ros2
-date: 2025-08-06
 author: ana52070
-tags: [GitHub项目]
+categories:
+- ROS2项目
+date: 2025-08-06
 description: jy901_for_ros2
+tags:
+- ROS2项目
+title: jy901_for_ros2
+permalink: /projects/ROS2项目/jy901_for_ros2
 ---
 
 # jy901_for_ros2

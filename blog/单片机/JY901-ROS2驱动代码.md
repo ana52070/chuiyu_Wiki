@@ -1,7 +1,11 @@
 ---
-title: JY901-ROS2驱动代码
+categories:
+- 单片机
 date: 于 2025-06-12
-tags: [CSDN搬运]
+tags:
+- 单片机
+title: JY901-ROS2驱动代码
+permalink: /blog/单片机/JY901-ROS2驱动代码
 ---
 
 # JY901-ROS2驱动代码

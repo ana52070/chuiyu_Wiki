@@ -1,7 +1,11 @@
 ---
-title: FunASR语音转文字本地部署、API接口教程
+categories:
+- ai
 date: 最新推荐文章于 2026-01-15
-tags: [CSDN搬运]
+tags:
+- ai
+title: FunASR语音转文字本地部署、API接口教程
+permalink: /blog/ai/FunASR语音转文字本地部署、API接口教程
 ---
 
 # FunASR语音转文字本地部署、API接口教程

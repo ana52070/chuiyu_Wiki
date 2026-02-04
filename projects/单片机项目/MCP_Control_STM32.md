@@ -1,9 +1,13 @@
 ---
-title: MCP_Control_STM32
-date: 2025-09-05
 author: ana52070
-tags: [GitHub项目]
+categories:
+- 单片机项目
+date: 2025-09-05
 description: 通过MCP使得大语言模型可以控制串口执行特定的STM32函数，使得大语言模型可以控制硬件
+tags:
+- 单片机项目
+title: MCP_Control_STM32
+permalink: /projects/单片机项目/MCP_Control_STM32
 ---
 
 # MCP_Control_STM32

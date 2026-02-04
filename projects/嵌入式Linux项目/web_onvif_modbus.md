@@ -1,9 +1,13 @@
 ---
-title: web_onvif_modbus
-date: 2026-01-28
 author: ana52070
-tags: [GitHub项目]
+categories:
+- 嵌入式Linux项目
+date: 2026-01-28
 description: 暂无描述
+tags:
+- 嵌入式Linux项目
+title: web_onvif_modbus
+permalink: /projects/嵌入式Linux项目/web_onvif_modbus
 ---
 
 # web_onvif_modbus

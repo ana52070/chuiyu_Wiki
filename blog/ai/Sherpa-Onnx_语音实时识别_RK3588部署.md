@@ -1,7 +1,11 @@
 ---
-title: Sherpa-Onnx 语音实时识别 /RK3588部署
+categories:
+- ai
 date: 最新推荐文章于 2026-01-01
-tags: [CSDN搬运]
+tags:
+- ai
+title: Sherpa-Onnx 语音实时识别 /RK3588部署
+permalink: /blog/ai/Sherpa-Onnx_语音实时识别_RK3588部署
 ---
 
 # Sherpa-Onnx 语音实时识别 /RK3588部署

@@ -1,7 +1,11 @@
 ---
-title: 安卓开发 Gradle下载网络问题解决方法
+categories:
+- other
 date: 最新推荐文章于 2025-02-26
-tags: [CSDN搬运]
+tags:
+- other
+title: 安卓开发 Gradle下载网络问题解决方法
+permalink: /blog/other/安卓开发_Gradle下载网络问题解决方法
 ---
 
 # 安卓开发 Gradle下载网络问题解决方法

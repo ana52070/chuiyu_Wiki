@@ -1,7 +1,11 @@
 ---
-title: YoloV5的Onnx模型转RKNN模型(包成功，最详细)
+categories:
+- yolo
 date: 最新推荐文章于 2025-12-31
-tags: [CSDN搬运]
+tags:
+- yolo
+title: YoloV5的Onnx模型转RKNN模型(包成功，最详细)
+permalink: /blog/yolo/YoloV5的Onnx模型转RKNN模型(包成功，最详细)
 ---
 
 # YoloV5的Onnx模型转RKNN模型(包成功，最详细)

@@ -1,7 +1,11 @@
 ---
-title: 大语言模型通过MCP控制STM32-支持Ollama、DeepSeek、openai等
+categories:
+- ai
 date: 最新推荐文章于 2026-01-30
-tags: [CSDN搬运]
+tags:
+- ai
+title: 大语言模型通过MCP控制STM32-支持Ollama、DeepSeek、openai等
+permalink: /blog/ai/大语言模型通过MCP控制STM32-支持Ollama、DeepSeek、openai等
 ---
 
 # 大语言模型通过MCP控制STM32-支持Ollama、DeepSeek、openai等

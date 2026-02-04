@@ -1,7 +1,11 @@
 ---
-title: ModBusRTU通讯协议/STM32驱动步进电机驱动板
+categories:
+- 单片机
 date: 已于 2025-03-02
-tags: [CSDN搬运]
+tags:
+- 单片机
+title: ModBusRTU通讯协议/STM32驱动步进电机驱动板
+permalink: /blog/单片机/ModBusRTU通讯协议STM32驱动步进电机驱动板
 ---
 
 # ModBusRTU通讯协议/STM32驱动步进电机驱动板

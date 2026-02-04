@@ -1,9 +1,13 @@
 ---
-title: STM32F103C8T6_FreeRTOS
-date: 2025-03-28
 author: ana52070
-tags: [GitHub项目]
+categories:
+- 单片机项目
+date: 2025-03-28
 description: STM32F103C8T6的FreeRTOS操作系统移植工程
+tags:
+- 单片机项目
+title: STM32F103C8T6_FreeRTOS
+permalink: /projects/单片机项目/STM32F103C8T6_FreeRTOS
 ---
 
 # STM32F103C8T6_FreeRTOS

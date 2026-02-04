@@ -1,7 +1,11 @@
 ---
-title: VScode使用AI编程教程
+categories:
+- ai
 date: 最新推荐文章于 2025-12-12
-tags: [CSDN搬运]
+tags:
+- ai
+title: VScode使用AI编程教程
+permalink: /blog/ai/VScode使用AI编程教程
 ---
 
 # VScode使用AI编程教程

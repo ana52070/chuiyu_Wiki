@@ -1,3 +1,12 @@
+---
+title: Nomachine-比VNC更稳定流畅的远程桌面软件
+date: '2026-02-03 18:17:53'
+permalink: /blog/tool/Nomachine-比VNC更稳定流畅的远程桌面软件
+categories:
+- tool
+tags:
+- tool
+---
 # Nomachine-比VNC更稳定流畅的远程桌面软件
 
 首先去官网下载对应的版本：

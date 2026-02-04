@@ -1,7 +1,11 @@
 ---
-title: SolidWorks模型导入Unity教程
+categories:
+- other
 date: 于 2025-03-02
-tags: [CSDN搬运]
+tags:
+- other
+title: SolidWorks模型导入Unity教程
+permalink: /blog/other/SolidWorks模型导入Unity教程
 ---
 
 # SolidWorks模型导入Unity教程

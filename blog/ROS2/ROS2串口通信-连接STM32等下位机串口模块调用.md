@@ -1,7 +1,11 @@
 ---
-title: ROS2串口通信-连接STM32等下位机/串口模块调用
+categories:
+- ROS2
 date: 已于 2025-03-26
-tags: [CSDN搬运]
+tags:
+- ROS2
+title: ROS2串口通信-连接STM32等下位机/串口模块调用
+permalink: /blog/ROS2/ROS2串口通信-连接STM32等下位机串口模块调用
 ---
 
 # ROS2串口通信-连接STM32等下位机/串口模块调用

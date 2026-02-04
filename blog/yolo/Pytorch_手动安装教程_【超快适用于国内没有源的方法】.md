@@ -1,7 +1,11 @@
 ---
-title: Pytorch 手动安装教程 【超快|适用于国内没有源的方法】
+categories:
+- yolo
 date: 已于 2025-02-08
-tags: [CSDN搬运]
+tags:
+- yolo
+title: Pytorch 手动安装教程 【超快|适用于国内没有源的方法】
+permalink: /blog/yolo/Pytorch_手动安装教程_【超快适用于国内没有源的方法】
 ---
 
 # Pytorch 手动安装教程 【超快|适用于国内没有源的方法】

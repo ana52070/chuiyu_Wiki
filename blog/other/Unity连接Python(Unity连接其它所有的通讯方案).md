@@ -1,7 +1,11 @@
 ---
-title: Unity连接Python(Unity连接其它所有的通讯方案)
+categories:
+- other
 date: 最新推荐文章于 2025-05-14
-tags: [CSDN搬运]
+tags:
+- other
+title: Unity连接Python(Unity连接其它所有的通讯方案)
+permalink: /blog/other/Unity连接Python(Unity连接其它所有的通讯方案)
 ---
 
 # Unity连接Python(Unity连接其它所有的通讯方案)

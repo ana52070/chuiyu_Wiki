@@ -1,9 +1,13 @@
 ---
-title: LabelSphere
-date: 2025-05-22
 author: ana52070
-tags: [GitHub项目]
+categories:
+- 软件项目
+date: 2025-05-22
 description: 暂无描述
+tags:
+- 软件项目
+title: LabelSphere
+permalink: /projects/软件项目/LabelSphere
 ---
 
 # LabelSphere

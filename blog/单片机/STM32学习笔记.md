@@ -1,3 +1,12 @@
+---
+title: STM32学习笔记
+date: '2026-02-04 12:36:12'
+permalink: /blog/单片机/STM32学习笔记
+categories:
+- 单片机
+tags:
+- 单片机
+---
 
 
 # STM32学习笔记

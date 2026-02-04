@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vitepress dev",
@@ -13,8 +14,17 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gray-matter": "^4.0.3",
+    "medium-zoom": "^1.1.0",
+    "sass": "^1.97.3",
     "vitepress": "^1.6.4",
+    "vitepress-plugin-search": "^1.0.4-alpha.22",
+    "vitepress-plugin-tabs": "^0.7.3",
     "vitepress-sidebar": "^1.33.1",
     "vue": "^3.5.27"
+  },
+  "dependencies": {
+    "echarts": "^6.0.0",
+    "vitepress-theme-teek": "^1.5.4"
   }
 }
