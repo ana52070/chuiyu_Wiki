@@ -31,6 +31,12 @@ export default defineConfig({
         resolvePath: '/blog/',
         useTitleFromFileHeading: true, // 读取 md 文件里的 # 标题作为侧边栏名称
         collapsed: false, // 是否默认折叠
+
+          // ✅ 新增：开启按 Frontmatter 中的 date 排序
+        sortMenusByFrontmatterDate: true,
+        
+        // ✅ 新增：排序方向 'desc' (降序: 新的在前) 或 'asc' (升序: 旧的在前)
+        sortMenusOrderByDescending: true
       },
       // 2. 自动生成 'guide' 文件夹的侧边栏
       {
@@ -39,6 +45,12 @@ export default defineConfig({
         resolvePath: '/guide/',
         useTitleFromFileHeading: true,
         collapsed: false, 
+
+          // ✅ 新增：开启按 Frontmatter 中的 date 排序
+        sortMenusByFrontmatterDate: true,
+        
+        // ✅ 新增：排序方向 'desc' (降序: 新的在前) 或 'asc' (升序: 旧的在前)
+        sortMenusOrderByDescending: true
       },
       // 3. 自动生成 'projects' 文件夹的侧边栏
       {
@@ -47,6 +59,12 @@ export default defineConfig({
         resolvePath: '/projects/',
         useTitleFromFileHeading: true,
         collapsed: false,
+
+          // ✅ 新增：开启按 Frontmatter 中的 date 排序
+        sortMenusByFrontmatterDate: true,
+        
+        // ✅ 新增：排序方向 'desc' (降序: 新的在前) 或 'asc' (升序: 旧的在前)
+        sortMenusOrderByDescending: true
       }
     ]),
 
