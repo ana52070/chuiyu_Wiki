@@ -8,7 +8,7 @@ tags: [CSDN搬运]
 
 > 原文链接：[安卓开发 Gradle下载网络问题解决方法](https://blog.csdn.net/chui_yu666/article/details/145516497)
 
-## 
+
 
 在进行安卓开发时检测会遇到Gradle包下载不了的问题，因此在这里建议手动下载，速度会快非常多，再也不用担心Gradle的问题了。具体操作方法如下：
 
