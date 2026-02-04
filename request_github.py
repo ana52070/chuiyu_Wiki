@@ -6,13 +6,12 @@ import time
 # ================= 配置区域 =================
 GITHUB_USER = "ana52070"  # 你的 GitHub 用户名
 TARGET_DIR = "./projects" # 保存目录
-GITHUB_TOKEN = "" # 请在此处填入你的 GitHub Token
 # ===========================================
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
     "Accept": "application/vnd.github.v3+json",
-    "Authorization": f"token {GITHUB_TOKEN}"
+
 }
 
 def get_repos():
