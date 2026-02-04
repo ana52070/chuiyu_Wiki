@@ -30,7 +30,7 @@ tags: [CSDN搬运]
 ![!\[\[Pasted image 20250818143655.png\]\]](https://i-blog.csdnimg.cn/direct/7062070b74a1430ba8e1af4d80d68df4.png)
 
 然后上传自己的数据集  
-![![[Pasted image 20250818143753.png]](https://i-blog.csdnimg.cn/direct/2d8649c86239412296c366514fd20f7f.png)
+![![](./assets/Pasted image 20250818143753.png)(https://i-blog.csdnimg.cn/direct/2d8649c86239412296c366514fd20f7f.png)
 
 等待上传完毕  
 ![!\[\[Pasted image 20250818143809.png\]\]](https://i-blog.csdnimg.cn/direct/98454178dcca447ea605e68d333c36b3.png)

@@ -26,17 +26,17 @@
 
 1.配置发送端的发送和接收地址
 
-<img src="assets/image-20240430202806168.png" alt="image-20240430202806168" style="zoom:20%;" />
+<img src="./assets/image-20240430202806168.png" alt="image-20240430202806168" style="zoom:20%;" />
 
 2.配置接收端的接收地址，要和发送端一致
 
-<img src="assets/image-20240430202843400.png" alt="image-20240430202843400" style="zoom:25%;" />
+<img src="./assets/image-20240430202843400.png" alt="image-20240430202843400" style="zoom:25%;" />
 
 3.配置config寄存器：控制芯片是属于发送还是接收状态：
 
 ​															最后一位是0则为发送状态，1为接收状态
 
-<img src="assets/image-20240430203003099.png" alt="image-20240430203003099" style="zoom:25%;" />
+<img src="./assets/image-20240430203003099.png" alt="image-20240430203003099" style="zoom:25%;" />
 
 ​		这里都配置成了接收状态
 
@@ -44,11 +44,11 @@
 
 ​	这里开启了通道0的自动应答模式
 
-<img src="assets/image-20240430203059867.png" alt="image-20240430203059867" style="zoom:25%;" />
+<img src="./assets/image-20240430203059867.png" alt="image-20240430203059867" style="zoom:25%;" />
 
 5.往接收寄存器发送一个数据
 
-<img src="assets/image-20240430203150393.png" alt="image-20240430203150393" style="zoom:25%;" />
+<img src="./assets/image-20240430203150393.png" alt="image-20240430203150393" style="zoom:25%;" />
 
 6.使用CE引脚，作用相当于笔记本的待机按键，由主机控制，0时为待机状态
 
@@ -62,7 +62,7 @@
 
 8.接收端接收到数据，此时STATUS寄存器的第1位自动置1
 
-<img src="assets/image-20240430203547774.png" alt="image-20240430203547774" style="zoom:25%;" />
+<img src="./assets/image-20240430203547774.png" alt="image-20240430203547774" style="zoom:25%;" />
 
 9.芯片进入中断，IRQ被芯片拉低，提醒MCU该来拿数据了。
 
@@ -70,7 +70,7 @@
 
 11.发送端接收到应答信号以后，STATUS寄存器第2位自动置1，表示接收到应答信号了
 
-<img src="assets/image-20240430203859477.png" alt="image-20240430203859477" style="zoom:25%;" />
+<img src="./assets/image-20240430203859477.png" alt="image-20240430203859477" style="zoom:25%;" />
 
 ​	同时芯片会进入中断，然后IRQ被芯片拉低，告诉MCU我发送出去了也接收到应答信号了。
 
@@ -142,11 +142,11 @@ RX_ADDR_P5(接收地址5)
 
 ## 1.STM32简介
 
-![image-20231121164546882](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20231121164546882.png)
+![image-20231121164546882](./assets/image-20231121164546882.png)
 
 ## 2.ARM架构
 
-![image-20231121164706190](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20231121164706190.png)
+![image-20231121164706190](./assets/image-20231121164706190.png)
 
 
 
@@ -154,11 +154,11 @@ RX_ADDR_P5(接收地址5)
 
 ### 1.简介
 
-![image-20231121165209911](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20231121165209911.png)
+![image-20231121165209911](./assets/image-20231121165209911.png)
 
 ### 2.片上资源
 
-<img src="C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20231121165356318.png" alt="image-20231121165356318" style="zoom:25%;" />
+<img src="./assets/image-20231121165356318.png" alt="image-20231121165356318" style="zoom:25%;" />
 
 ​	PS：C8T6芯片不存在最后四项外设
 
@@ -166,13 +166,13 @@ RX_ADDR_P5(接收地址5)
 
 ## 3.命名规则
 
-![image-20231121170222998](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20231121170222998.png)
+![image-20231121170222998](./assets/image-20231121170222998.png)
 
 
 
 ## 4.系统结构
 
-![image-20231121170247958](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20231121170247958.png)
+![image-20231121170247958](./assets/image-20231121170247958.png)
 
 ​	PS：了解即可
 
@@ -180,7 +180,7 @@ RX_ADDR_P5(接收地址5)
 
 ## 5.引脚定义
 
-![image-20231121183523255](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-202311211835232255.png)
+![image-20231121183523255](./assets/image-202311211835232255.png)
 
 
 
@@ -188,7 +188,7 @@ RX_ADDR_P5(接收地址5)
 
 ## 6.启动配置
 
-![image-20231121171547930](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20231121171547830.png)
+![image-20231121171547930](./assets/image-20231121171547830.png)
 
 ​		启动配置的作用就是指定程序开始运行的位置。一般情况下，程序都是在FLASH程序存储器里开始执行，但是在某些情况下，我们也可以让程序在别的地方开始执行，用以完成特殊的功能。
 
@@ -206,15 +206,15 @@ RX_ADDR_P5(接收地址5)
 
 ## 7.最小系统电路
 
-![image-20231121172231410](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20231121172231410.png)
+![image-20231121172231410](./assets/image-20231121172231410.png)
 
 
 
 ## 8.最小系统板实物图
 
-![image-20231121173000230](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20231121173000230.png)
+![image-20231121173000230](./assets/image-20231121173000230.png)
 
-![image-20231121173058303](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20231121173058303.png)
+![image-20231121173058303](./assets/image-20231121173058303.png)
 
 
 
@@ -224,7 +224,7 @@ RX_ADDR_P5(接收地址5)
 
 ## 1.安装目录
 
-![image-20231121173305767](C:\Users\ting_yu\AppData\Roaming\Typora\typora-user-images\image-20231121173305767.png)
+![image-20231121173305767](./assets/image-20231121173305767.png)
 
 ## 2.安装链接
 
@@ -915,7 +915,7 @@ int main(void)
 
 ​		右上图：相比于左上图，上拉了一个高电平，当按键松手时，引脚由于上拉作用，自然保持为高电平。当按键按下时，引脚直接接到GND，也就是一股无穷大的力把这个引脚往下拉，所以引脚为低电平。这种状态下，引脚不会出现悬空状态，所以此时PA0引脚可以配置为浮空输入或者上拉输入：
 
-​					如果是上拉输入，那就是内外两个上拉电阻共同作用了，这时高电平就会更强一些，对应高电平就更加稳定，当然这样的话，当引脚被强行拉到低时，损耗也就会大一些。<img src="assets/image-20231122205317603.png" alt="image-20231122205317603" style="zoom:25%;" />
+​					如果是上拉输入，那就是内外两个上拉电阻共同作用了，这时高电平就会更强一些，对应高电平就更加稳定，当然这样的话，当引脚被强行拉到低时，损耗也就会大一些。<img src="./assets/image-20231122205317603.png" alt="image-20231122205317603" style="zoom:25%;" />
 
 ​		左下图：必须要求PA0是下拉输入的模式，当按键按下时，引脚为高电平，松手时，引脚回到默认值低电平。但一般单片机可能不一定有下拉输入的模式，所以最好还是用上面的接法，下面的作为扩展部分了解即可。
 
@@ -947,7 +947,7 @@ int main(void)
 
 ​	GND:接地，即GND
 
-​	VCC:接3.3V
+​	VC接3.3V
 
 
 
@@ -3514,11 +3514,11 @@ PS：计数器同样也有跟预分频器一样的缓冲机制，当然这个可
 
 ​					首先它会启动内部时钟，选择内部8MHz为系统时钟，暂时以内部8MHz的时钟运行哈：
 
-<img src="assets/image-20231129203604340.png" alt="image-20231129203604340" style="zoom: 33%;" />
+<img src="./assets/image-20231129203604340.png" alt="image-20231129203604340" style="zoom: 33%;" />
 
 ​					然后再启动外部时钟，配置外部时钟走这一路，进入PLL锁相环进行倍频，8MHz倍频9倍，得到72MHz，等到锁相环输出稳定后，选择锁相环输出为系统时钟，这样就把系统时钟由8MHz切换到了72MHz。
 
-<img src="assets/image-20231129203841871.png" alt="image-20231129203841871" style="zoom:33%;" />
+<img src="./assets/image-20231129203841871.png" alt="image-20231129203841871" style="zoom:33%;" />
 
 这是ST配置的流程。
 
@@ -3544,7 +3544,7 @@ PS：计数器同样也有跟预分频器一样的缓冲机制，当然这个可
 
 ​	首先系统时钟72MHz进入AHB总线，AHB总线有个预分频器，在SystemInit里配置的分配系数为1，那AHB的时钟就是72MHz。然后进入APB1总线，这里配置的分配系数是2，所以APB1总线的时钟为72MHz/2 = 36MHz 
 
-<img src="assets/image-20231129204847637.png" alt="image-20231129204847637" style="zoom:33%;" />
+<img src="./assets/image-20231129204847637.png" alt="image-20231129204847637" style="zoom:33%;" />
 
 **结论：无论是高级定时器还是通用定时器还是基本定时器，它们的内部基准时钟都是72MHz**
 
@@ -3558,7 +3558,7 @@ PS：计数器同样也有跟预分频器一样的缓冲机制，当然这个可
 
 ​		打开时钟，就是在这里写1，让左边的时钟能够通过与门输出给外设
 
-<img src="assets/image-20231129205453925.png" alt="image-20231129205453925" style="zoom:50%;" />
+<img src="./assets/image-20231129205453925.png" alt="image-20231129205453925" style="zoom:50%;" />
 
 # 【6-2】定时中断&内外时钟源选择
 
@@ -4159,7 +4159,7 @@ void TIM_SetCompare4(TIM_TypeDef* TIMx, uint16_t Compare4);
 
 该部分电路对应通用定时器中的：
 
-<img src="assets/image-20231203161317555.png" alt="image-20231203161317555" style="zoom:66%;" />
+<img src="./assets/image-20231203161317555.png" alt="image-20231203161317555" style="zoom:66%;" />
 
 
 
@@ -4263,7 +4263,7 @@ void TIM_SetCompare4(TIM_TypeDef* TIMx, uint16_t Compare4);
 
 
 
-<img src="assets/image-20231203184827110.png" alt="image-20231203184827110" style="zoom:50%;" />
+<img src="./assets/image-20231203184827110.png" alt="image-20231203184827110" style="zoom:50%;" />
 
 首先左上角这里，是时基单元和运行控制部分，再左边是时钟源选择，这里忽略了。这些都是上一小节的内容，在这里还需要继续使用。只不过是这里更新事件的中断申请，我们不再需要了。输出PWM暂时还不需要中断。
 
@@ -4299,7 +4299,7 @@ void TIM_SetCompare4(TIM_TypeDef* TIMx, uint16_t Compare4);
 
 ​	右边的式子CK_PSC/(PSC+1)/(ARR+1)就是计数器的更新频率公式。
 
-<img src="assets/image-20231204171717721.png" alt="image-20231204171717721" style="zoom:50%;" />
+<img src="./assets/image-20231204171717721.png" alt="image-20231204171717721" style="zoom:50%;" />
 
 ​	2.PWM占空比：Duty = CCR/（ARR+1）
 
@@ -5054,7 +5054,7 @@ PS:
 
 ​	1.STM32只能测量数字信号的频率.如果你想测量一个正弦波,那还需要搭建一个信号预处理电路.最简单的就是用运放搭一个比较器,把正弦波转换为数字信号,然后再输入给STM32就行了.如果你测的信号电压非常高,那还需要考虑一下隔离的问题,比如用隔离放大器等元件,隔离高压端和低压端,保证安全.
 
-<img src="assets/image-20240204200958525.png" alt="image-20240204200958525" style="zoom:33%;" />
+<img src="./assets/image-20240204200958525.png" alt="image-20240204200958525" style="zoom:33%;" />
 
 
 
@@ -5098,15 +5098,15 @@ PS:
 
 **Part1**
 
-<img src="assets/image-20240204202636877.png" alt="image-20240204202636877" style="zoom:25%;" />
+<img src="./assets/image-20240204202636877.png" alt="image-20240204202636877" style="zoom:25%;" />
 
 最左边,是四个通道的引脚,参考引脚定义表,就能知道这个引脚是复用在了哪个位置.
 
-<img src="assets/image-20240204202817712.png" alt="image-20240204202817712" style="zoom:50%;" />
+<img src="./assets/image-20240204202817712.png" alt="image-20240204202817712" style="zoom:50%;" />
 
 然后引脚进来.这里有个三输入的异或门.这个异或门的输入接在了通道123端口,异或门的执行逻辑:当三个输入引脚的任何一个有电平翻转时,输出引脚就产生一次电平翻转.之后输出通过数据选择器,到达输入捕获通道1
 
-<img src="assets/image-20240204203030370.png" alt="image-20240204203030370" style="zoom:50%;" />
+<img src="./assets/image-20240204203030370.png" alt="image-20240204203030370" style="zoom:50%;" />
 
 数据选择器如果选择上面一个,那输入捕获通道1的输入,就是三个引脚的异或值.如果选择下面一个,那异或门就没有用,4个通道各用各的引脚.
 
@@ -5334,7 +5334,7 @@ uint16_t TIM_GetCapture4(TIM_TypeDef* TIMx);
 
 ​	首先左边这里IN0-IN7，是8路输入通道，通过通道选择开关，选中一路输入到这个红点进行转换。下面是地址锁存和译码，就是你想选择哪个通道，就把通道号放在这三个脚上，然后给一个锁存信号，上面这里对应的通道选择开关就可以自动拨好了。
 
-<img src="assets/image-20231209183158289.png" alt="image-20231209183158289" style="zoom:25%;" />
+<img src="./assets/image-20231209183158289.png" alt="image-20231209183158289" style="zoom:25%;" />
 
 ​	这部分就相当于一个可以选择模拟信号的数据选择器。
 
@@ -5350,7 +5350,7 @@ uint16_t TIM_GetCapture4(TIM_TypeDef* TIMx);
 
 ​	首先这是一个电压比较器，它可以判断两个输入信号电压的大小关系，输出
 
-<img src="assets/image-20231209183354648.png" alt="image-20231209183354648" style="zoom:33%;" />
+<img src="./assets/image-20231209183354648.png" alt="image-20231209183354648" style="zoom:33%;" />
 
 一个高低电平，指示谁大谁小，它的两个输入端，一个是待测电压，另一个是DAC的电压输出端（DAC是数模转换器，给它一个数据，它就可以输出数据对应的电压）。
 
@@ -5372,7 +5372,7 @@ uint16_t TIM_GetCapture4(TIM_TypeDef* TIMx);
 
 **part4**
 
-<img src="assets/image-20231209184642705.png" alt="image-20231209184642705" style="zoom:33%;" />
+<img src="./assets/image-20231209184642705.png" alt="image-20231209184642705" style="zoom:33%;" />
 
 ​	最后结果通过三态锁存缓冲器进行输出，8位就有8根线，12位就有12根线。
 
@@ -5396,11 +5396,11 @@ uint16_t TIM_GetCapture4(TIM_TypeDef* TIMx);
 
 ​	左边是ADC的输入通道，包括16个GPIO口，IN0-IN15和两个内部通道，一个是内部温度传感器，另一个是VREFINT（V Reference Internal）,内部参考电压。总共是18个输入通道，然后到达红圈处，这是一个模拟多路开关。
 
-<img src="assets/image-20231209190001804.png" alt="image-20231209190001804" style="zoom:33%;" />
+<img src="./assets/image-20231209190001804.png" alt="image-20231209190001804" style="zoom:33%;" />
 
 可以指定我们想要选择的通道，右边是多路开关的输出，进入到模数转换器，这里模数转换器就是执行我们刚才讲过的逐次比较的过程，转换结果会直接放在上面的数据寄存器里。
 
-<img src="assets/image-20231209190219854.png" alt="image-20231209190219854" style="zoom:33%;" />
+<img src="./assets/image-20231209190219854.png" alt="image-20231209190219854" style="zoom:33%;" />
 
 我们读取寄存器就能知道ADC转换的结果了。
 
@@ -5410,7 +5410,7 @@ uint16_t TIM_GetCapture4(TIM_TypeDef* TIMx);
 
 在模拟多路选择开关这里，对于普通的ADC，多路开关一般都是只选中一个的，就是选中某一个通道，开始转换，等待转换完成，取出结果，这是普通的流程。
 
-<img src="assets/image-20231209190443060.png" alt="image-20231209190443060" style="zoom:50%;" />
+<img src="./assets/image-20231209190443060.png" alt="image-20231209190443060" style="zoom:50%;" />
 
 但是这里就比较高级了，它可以同时选中多个，而且在转换的时候，还分成了两个组，规则通道组和注入通道组，其中规则组可以一次性最多选中16个通道，注入组最多可以选中4个通道。这有啥用呢？
 
@@ -5420,11 +5420,11 @@ uint16_t TIM_GetCapture4(TIM_TypeDef* TIMx);
 
 ​			一种是规则组菜单，可以同时上16个菜，但是它有个尴尬的地方，就是这个规则组只有一个数据寄存器，就是这个桌子比较小，最多只能放一个菜，如果上16个菜，那不好意思，前15个菜都会被挤掉，你只能得到第16个菜。所以对于规则组转换来说，如果使用这个菜单的话，最好配合**DMA**来实现。（DMA是一个数据转运小帮手，它可以在每上一个菜之后，把这个菜挪到其他地方去，防止被覆盖。）
 
-<img src="assets/image-20231209192051568.png" alt="image-20231209192051568" style="zoom:33%;" />
+<img src="./assets/image-20231209192051568.png" alt="image-20231209192051568" style="zoom:33%;" />
 
 ​			接着我们看注入组，它相当于是餐厅的VIP座位，在这个座位上，一次性最多可以点4个菜，并且注入组的数据寄存器有4个，是可以同时上4个菜的。对于注入组而言，就不用担心数据覆盖的问题了。
 
-<img src="assets/image-20231209192028380.png" alt="image-20231209192028380" style="zoom:33%;" />
+<img src="./assets/image-20231209192028380.png" alt="image-20231209192028380" style="zoom:33%;" />
 
 
 
@@ -5436,7 +5436,7 @@ uint16_t TIM_GetCapture4(TIM_TypeDef* TIMx);
 
 首先是左下角这里触发转换的部分，也就是ADC的START信号，开始转换
 
-<img src="assets/image-20231209192332107.png" alt="image-20231209192332107" style="zoom:50%;" />
+<img src="./assets/image-20231209192332107.png" alt="image-20231209192332107" style="zoom:50%;" />
 
 对于STM32的ADC，触发ADC开始转换的信号有两种：
 
@@ -5452,7 +5452,7 @@ uint16_t TIM_GetCapture4(TIM_TypeDef* TIMx);
 
 **part4**
 
-<img src="assets/image-20231209194036135.png" alt="image-20231209194036135" style="zoom:50%;" />
+<img src="./assets/image-20231209194036135.png" alt="image-20231209194036135" style="zoom:50%;" />
 
 上面两个是ADC的参考电压，决定了ADC输入电压的范围；
 
@@ -5466,7 +5466,7 @@ uint16_t TIM_GetCapture4(TIM_TypeDef* TIMx);
 
 **part5**
 
-<img src="assets/image-20231209194404118.png" alt="image-20231209194404118" style="zoom:33%;" />
+<img src="./assets/image-20231209194404118.png" alt="image-20231209194404118" style="zoom:33%;" />
 
 ADCCLK是ADC的时钟，相当于前面ADC里的CLOCK，是用于驱动内部逐次比较的时钟。这个ADCCLK是来自ADC预分频器，这个ADC预分频器是来源于RCC的。
 
@@ -5476,7 +5476,7 @@ ADCCLK是ADC的时钟，相当于前面ADC里的CLOCK，是用于驱动内部逐
 
 
 
-<img src="assets/image-20231209194812876.png" alt="image-20231209194812876" style="zoom:50%;" />
+<img src="./assets/image-20231209194812876.png" alt="image-20231209194812876" style="zoom:50%;" />
 
 模拟看门狗，它里面可以存一个阈值高限和阈值低限，如果启动了模拟看门狗，并且指定了看门的通道，那这个看门狗就会关注它看门的通道，一但超过这个阈值范围了，它就会乱叫，就会在上面，申请一个模拟看门狗的中断，最后通向NVIC。
 
@@ -6026,17 +6026,17 @@ PS：
 
 ​	这里画了几个右移的符号，就是代表这个移位寄存器是往右移的，是低位先行。当数据由数据寄存器转到移位寄存器时，会置一个TXE的标志位，我们判断这个标志位就知道是不是可以写下一个数据了。
 
-<img src="assets/image-20231214162940498.png" alt="image-20231214162940498" style="zoom:33%;" />
+<img src="./assets/image-20231214162940498.png" alt="image-20231214162940498" style="zoom:33%;" />
 
 ​	然后接收部分也是类似的哈：RX引脚的波形，通过GPIO输入，在数据接收器的控制下，一位一位地移入接收移位寄存器，这里画了右移的符号，也是右移的，因为是低位先行，所以要从左边开始移进来，移完一帧数据后，数据就会统一运到接收数据寄存器，在转移的同时，置一个RXNE标志位，我们检查这个标志位，就可以知道是不是接收到数据了。同时这个标志位也可以去申请中断，这样就可以在收到数据的时候，直接进入中断函数，然后快速的读取和保存数据。
 
-<img src="assets/image-20231214162951547.png" alt="image-20231214162951547" style="zoom:33%;" />
+<img src="./assets/image-20231214162951547.png" alt="image-20231214162951547" style="zoom:33%;" />
 
 **那右边其实是有四个寄存器哈，但是在软件层面，只有一个DR寄存器可以供我们读写：**
 
 ​	写入DR时，数据走上面这条路，进行发送；读取DR时，数据走下面这条路，进行接收。
 
-<img src="assets/image-20231214163302209.png" alt="image-20231214163302209" style="zoom:50%;" />
+<img src="./assets/image-20231214163302209.png" alt="image-20231214163302209" style="zoom:50%;" />
 
 
 
@@ -7377,7 +7377,7 @@ int main(void)
 
 ​				1.拔掉STM32上面的跳线帽，该跳线帽是用来配置BOOT0引脚的，然后插在右边两个针脚，配置BOOT0为1，如下图：
 
-<img src="assets/1703659233988.png" alt="1703659233988" style="zoom:50%;" />
+<img src="./assets/1703659233988.png" alt="1703659233988" style="zoom:50%;" />
 
 ​				2.一定要再按一下复位键，因为STM32只有在刚复位时才会读取BOOT引脚，程序运行之后，切换BOOT引脚是无效的.
 
