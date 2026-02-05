@@ -1,14 +1,17 @@
 ---
-author: ana52070
+author: ana52070 # 文章作者
 categories:
-- 单片机项目
-date: 2025-03-28
-description: STM32F103C8T6的FreeRTOS操作系统移植工程
+- 单片机项目 # 文章分类，用于归档
+date: 2025-03-28 # 发布日期
+description: STM32F103C8T6的FreeRTOS操作系统移植工程 # 文章摘要/描述，常用于SEO或列表页显示
 tags:
-- 单片机项目
-title: STM32F103C8T6_FreeRTOS
-permalink: /projects/单片机项目/STM32F103C8T6_FreeRTOS
+- 单片机项目 # 文章标签，用于检索
+title: STM32F103C8T6_FreeRTOS # 文章标题，显示在页面顶部
+permalink: /projects/单片机项目/STM32F103C8T6_FreeRTOS # 永久链接，指定浏览器访问的URL路径
 ---
+
+
+
 
 # STM32F103C8T6_FreeRTOS
 
