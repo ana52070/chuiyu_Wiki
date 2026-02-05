@@ -1,9 +1,14 @@
 ---
+title: 【3-4】按键控制LED&光敏控制蜂鸣
 author: chuiyu
-date: 2026-02-04
+date: 2026-02-04 08:00:00
 description: 【3-4】按键控制LED&光敏控制蜂鸣
 tags:
-- STM32单片机
+  - STM32单片机
+permalink: /pages/1266ff
+categories:
+  - guide
+  - STM32单片机
 ---
 
 # 【3-4】按键控制LED&光敏控制蜂鸣

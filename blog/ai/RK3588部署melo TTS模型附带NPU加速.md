@@ -1,3 +1,11 @@
+---
+date: 2026-02-05 14:51:44
+title: RK3588部署melo TTS模型附带NPU加速
+permalink: /pages/aaf782
+categories:
+  - blog
+  - ai
+---
 # **环境**
 
 LubanCat4 RK3588S

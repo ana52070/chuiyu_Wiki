@@ -46,7 +46,7 @@ export const teekConfig = defineTeekConfig({
     fileContentLoaderIgnore: ['**/tags.md', '**/categories.md', '**/archives.md', '**/assets/**'],
     sidebarOption: {
       ignoreList: ['**/assets/**', 'assets'],
-      collapsed: true
+      // collapsed: true
     },
     catalogueOption: {
       path: './',

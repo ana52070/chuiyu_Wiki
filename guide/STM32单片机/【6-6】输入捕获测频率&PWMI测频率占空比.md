@@ -1,9 +1,14 @@
 ---
+title: 【6-6】输入捕获测频率&PWMI测频率占空比
 author: chuiyu
-date: 2026-02-04
+date: 2026-02-04 08:00:00
 description: 【6-6】输入捕获测频率&PWMI测频率占空比
 tags:
-- STM32单片机
+  - STM32单片机
+permalink: /pages/81c57e
+categories:
+  - guide
+  - STM32单片机
 ---
 
 # 【6-6】输入捕获测频率&PWMI测频率占空比

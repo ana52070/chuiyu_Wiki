@@ -6,3 +6,5 @@ cache
 .idea
 .vscode
 .obsidian
+.env
+__pycache__/

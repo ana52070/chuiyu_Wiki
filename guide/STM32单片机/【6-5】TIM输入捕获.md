@@ -1,9 +1,14 @@
 ---
+title: 【6-5】TIM输入捕获
 author: chuiyu
-date: 2026-02-04
+date: 2026-02-04 08:00:00
 description: 【6-5】TIM输入捕获
 tags:
-- STM32单片机
+  - STM32单片机
+permalink: /pages/ae7797
+categories:
+  - guide
+  - STM32单片机
 ---
 
 # 【6-5】TIM输入捕获

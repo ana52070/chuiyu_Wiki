@@ -1,9 +1,14 @@
 ---
+title: 【3-3】GPIO输入
 author: chuiyu
-date: 2026-02-04
+date: 2026-02-04 08:00:00
 description: 【3-3】GPIO输入
 tags:
-- STM32单片机
+  - STM32单片机
+permalink: /pages/b3553e
+categories:
+  - guide
+  - STM32单片机
 ---
 
 # 【3-3】GPIO输入

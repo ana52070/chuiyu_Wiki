@@ -1,9 +1,14 @@
 ---
+title: 【7-1】ADC数模转换器
 author: chuiyu
-date: 2026-02-04
+date: 2026-02-04 08:00:00
 description: 【7-1】ADC数模转换器
 tags:
-- STM32单片机
+  - STM32单片机
+permalink: /pages/4e379e
+categories:
+  - guide
+  - STM32单片机
 ---
 
 # 【7-1】ADC数模转换器

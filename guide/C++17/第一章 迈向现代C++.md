@@ -1,9 +1,14 @@
 ---
+title: 第一章 迈向现代C++
 author: chuiyu
-date: 2026-02-05
+date: 2026-02-05 08:00:00
 description: 第一章 迈向现代C++
 tags:
   - Cpp17
+permalink: /pages/467822
+categories:
+  - guide
+  - C++17
 ---
 # 第一章 迈向现代C++
 编译环境：本书将使用 clang++ 作为唯一使用的编译器，同时总是在代码中使用 -std=c++2a 编译标志。

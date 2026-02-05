@@ -1,9 +1,14 @@
 ---
+title: 【5-1】EXTI外部中断
 author: chuiyu
-date: 2026-02-04
+date: 2026-02-04 08:00:00
 description: 【5-1】EXTI外部中断
 tags:
-- STM32单片机
+  - STM32单片机
+permalink: /pages/9e80fb
+categories:
+  - guide
+  - STM32单片机
 ---
 
 # 【5-1】EXTI外部中断

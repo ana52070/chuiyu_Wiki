@@ -1,9 +1,14 @@
 ---
+title: 【4-2】OLED显示屏
 author: chuiyu
-date: 2026-02-04
+date: 2026-02-04 08:00:00
 description: 【4-2】OLED显示屏
 tags:
-- STM32单片机
+  - STM32单片机
+permalink: /pages/efaeef
+categories:
+  - guide
+  - STM32单片机
 ---
 
 # 【4-2】OLED显示屏

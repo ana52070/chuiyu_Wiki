@@ -1,9 +1,14 @@
 ---
+title: 【9-4】USART串口数据包
 author: chuiyu
-date: 2026-02-04
+date: 2026-02-04 08:00:00
 description: 【9-4】USART串口数据包
 tags:
-- STM32单片机
+  - STM32单片机
+permalink: /pages/40ec1b
+categories:
+  - guide
+  - STM32单片机
 ---
 
 # 【9-4】USART串口数据包

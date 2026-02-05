@@ -1,9 +1,14 @@
 ---
+title: 【3-1】GPIO输出
 author: chuiyu
-date: 2026-02-04
+date: 2026-02-04 08:00:00
 description: 【3-1】GPIO输出
 tags:
-- STM32单片机
+  - STM32单片机
+permalink: /pages/e9fa1d
+categories:
+  - guide
+  - STM32单片机
 ---
 
 # 【3-1】GPIO输出

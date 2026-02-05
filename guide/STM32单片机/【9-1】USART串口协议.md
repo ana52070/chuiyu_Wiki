@@ -1,9 +1,14 @@
 ---
+title: 【9-1】USART串口协议
 author: chuiyu
-date: 2026-02-04
+date: 2026-02-04 08:00:00
 description: 【9-1】USART串口协议
 tags:
-- STM32单片机
+  - STM32单片机
+permalink: /pages/0bae72
+categories:
+  - guide
+  - STM32单片机
 ---
 
 # 【9-1】USART串口协议

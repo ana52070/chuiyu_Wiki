@@ -1,9 +1,14 @@
 ---
+title: 【3-2】LED&流水灯&蜂鸣器
 author: chuiyu
-date: 2026-02-04
+date: 2026-02-04 08:00:00
 description: 【3-2】LED&流水灯&蜂鸣器
 tags:
-- STM32单片机
+  - STM32单片机
+permalink: /pages/e7b271
+categories:
+  - guide
+  - STM32单片机
 ---
 
 # 【3-2】LED&流水灯&蜂鸣器

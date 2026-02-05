@@ -1,9 +1,14 @@
 ---
+title: 附录1：Clang++开发环境搭建
 author: chuiyu
-date: 2026-02-05
+date: 2026-02-05 08:00:00
 description: 附录1：Clang++开发环境搭建
 tags:
   - Cpp17
+permalink: /pages/a20b71
+categories:
+  - guide
+  - C++17
 ---
 这通常会安装 Ubuntu 官方仓库里认为“稳定”的版本（比如 Ubuntu 20.04 可能是 Clang 10，22.04 可能是 Clang 14）。
 
