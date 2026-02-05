@@ -1,7 +1,7 @@
 # Chuiyu Wiki (吹雨的知识库)
 
 <p align="center">
-  <img src="public/logo.jpg" alt="Logo" width="120" height="120" style="border-radius: 50%;">
+  <img src="/logo.jpg" alt="Logo" width="120" height="120" style="border-radius: 50%;">
 </p>
 
 <p align="center">
@@ -29,7 +29,7 @@
 
 **Chuiyu Wiki** 是一个基于 [VitePress](https://vitepress.dev/) 构建的个人知识库与博客系统。这里记录了我在学习和开发过程中的点滴积累，涵盖了嵌入式开发、人工智能、Linux 系统、ROS2 等多个领域的技术笔记与项目实战。
 
-本项目采用了 [vitepress-theme-teek](https://github.com/teek-theme/vitepress-theme-teek) 主题，界面简洁美观，支持多种自定义配置。
+本项目采用了 [vitepress-theme-teek](https://github.com/Kele-Bingtang/vitepress-theme-teek) 主题，界面简洁美观，支持多种自定义配置。
 
 ## 🚀 内容概览
 
