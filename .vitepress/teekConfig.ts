@@ -22,7 +22,7 @@ export const teekConfig = defineTeekConfig({
     enabled: true,
     name: "Chuiyu Wiki",
     bgStyle: "fullImg", // 暂时设为纯色 pure 或全屏图 fullImg
-    imgSrc:"/background1.jpg",
+    imgSrc:"/background2.jpg",
     description: [
       "要努力去发光,而不是被照亮",
       "光而不耀"
