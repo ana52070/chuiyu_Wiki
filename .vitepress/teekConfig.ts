@@ -38,9 +38,19 @@ export const teekConfig = defineTeekConfig({
   // 核心插件配置（自动生成分类和侧边栏）
   vitePlugins: {
     sidebar: true,
-    autoFrontmatter: true, // 如果你运行了之前的 python 脚本，这里也可以设为 false
+    autoFrontmatter: true,
+    autoFrontmatterOption: {
+      categories: true,
+    },
     docAnalysis: true,
-    fileContentLoaderIgnore: ['**/tags.md', '**/categories.md', '**/archives.md'],
+    fileContentLoaderIgnore: ['**/tags.md', '**/categories.md', '**/archives.md', '**/assets/**'],
+    sidebarOption: {
+      ignoreList: ['**/assets/**', 'assets']
+    },
+    catalogueOption: {
+      path: './',
+      ignoreList: ['assets', 'public', '.vitepress', 'node_modules']
+    }
   },
 
 

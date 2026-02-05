@@ -22,6 +22,10 @@ def fix_frontmatter():
             continue
             
         for root, dirs, files in os.walk(root_dir):
+            # 排除 assets 目录
+            if 'assets' in dirs:
+                dirs.remove('assets')
+            
             for file in files:
                 if not file.endswith(".md") or file == "index.md": # 排除首页
                     continue

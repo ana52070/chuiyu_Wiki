@@ -1,9 +1,9 @@
 ---
-title: 标签
+title: 分类
 date: 2026-02-05 08:00:00
 articleOverviewPage: true
 layout: page
-permalink: /tags/
+permalink: /categories/
 categories:
-  - 标签
+  - 分类
 ---
