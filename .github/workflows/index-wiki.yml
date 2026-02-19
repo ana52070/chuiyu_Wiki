@@ -29,7 +29,6 @@ jobs:
           # 保留原有的变量
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           # 新增脚本缺少的这两个关键变量
           SILICONFLOW_KEY: ${{ secrets.SILICONFLOW_KEY }}
           AI_RGA_KEY: ${{ secrets.AI_RGA_KEY }}
