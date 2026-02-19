@@ -3,5 +3,11 @@
     "api/webhook.py": {
       "runtime": "python3.9"
     }
-  }
+  },
+  "routes": [
+    {
+      "src": "/api/webhook",
+      "dest": "/api/webhook.py"
+    }
+  ]
 }
