@@ -1,15 +1,10 @@
 {
+  "buildCommand": "npm run docs:build",
+  "outputDirectory": ".vitepress/dist",
   "builds": [
     {
       "src": "api/webhook.py",
       "use": "@vercel/python"
-    },
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": ".vitepress/dist"
-      }
     }
   ],
   "routes": [
