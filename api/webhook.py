@@ -1,13 +1,13 @@
 """
 webhook.py - Vercel Serverless Function
-企业微信消息回调入口
+企业微信消息回调入口，使用 BaseHTTPRequestHandler 格式
 """
 
 import os
 import sys
-import json
 import xml.etree.ElementTree as ET
-from urllib.parse import parse_qs
+from http.server import BaseHTTPRequestHandler
+from urllib.parse import urlparse, parse_qs
 
 sys.path.insert(0, os.path.dirname(__file__))
 from wxwork import WXBizMsgCrypt
@@ -42,56 +42,48 @@ def send_message(to_user: str, content: str):
     requests.post(url, json=payload, timeout=15)
 
 
-def parse_message(xml_str: str) -> dict:
+def parse_xml(xml_str: str) -> dict:
     root = ET.fromstring(xml_str)
     return {child.tag: child.text for child in root}
 
 
-def handler(request, response):
-    method = request.method
-    query  = request.query or {}
+class handler(BaseHTTPRequestHandler):
 
-    # GET：企业微信验证回调 URL
-    if method == "GET":
-        msg_signature = query.get("msg_signature", "")
-        timestamp     = query.get("timestamp", "")
-        nonce         = query.get("nonce", "")
-        echostr       = query.get("echostr", "")
+    def do_GET(self):
+        params = parse_qs(urlparse(self.path).query)
+        msg_signature = params.get("msg_signature", [""])[0]
+        timestamp     = params.get("timestamp", [""])[0]
+        nonce         = params.get("nonce", [""])[0]
+        echostr       = params.get("echostr", [""])[0]
 
         if crypt.verify_signature(msg_signature, timestamp, nonce, echostr):
             decrypted = crypt.decrypt(echostr)
-            response.status_code = 200
-            response.body = decrypted
+            self._respond(200, decrypted)
         else:
-            response.status_code = 403
-            response.body = "Forbidden"
-        return response
+            self._respond(403, "Forbidden")
 
-    # POST：接收消息
-    if method == "POST":
-        msg_signature = query.get("msg_signature", "")
-        timestamp     = query.get("timestamp", "")
-        nonce         = query.get("nonce", "")
+    def do_POST(self):
+        params = parse_qs(urlparse(self.path).query)
+        msg_signature = params.get("msg_signature", [""])[0]
+        timestamp     = params.get("timestamp", [""])[0]
+        nonce         = params.get("nonce", [""])[0]
 
-        body = request.body or ""
-        if isinstance(body, bytes):
-            body = body.decode("utf-8")
+        length = int(self.headers.get("Content-Length", 0))
+        body   = self.rfile.read(length).decode("utf-8")
 
         try:
             root      = ET.fromstring(body)
             encrypted = root.find("Encrypt").text
         except Exception:
-            response.status_code = 400
-            response.body = "Bad Request"
-            return response
+            self._respond(400, "Bad Request")
+            return
 
         if not crypt.verify_signature(msg_signature, timestamp, nonce, encrypted):
-            response.status_code = 403
-            response.body = "Forbidden"
-            return response
+            self._respond(403, "Forbidden")
+            return
 
         xml_str = crypt.decrypt(encrypted)
-        msg     = parse_message(xml_str)
+        msg     = parse_xml(xml_str)
 
         if msg.get("MsgType") == "text":
             user_id  = msg.get("FromUserName", "")
@@ -99,10 +91,12 @@ def handler(request, response):
             answer   = rag_query(question)
             send_message(user_id, answer)
 
-        response.status_code = 200
-        response.body = "success"
-        return response
+        self._respond(200, "success")
 
-    response.status_code = 405
-    response.body = "Method Not Allowed"
-    return response
+    def _respond(self, code: int, body: str):
+        self.send_response(code)
+        self.end_headers()
+        self.wfile.write(body.encode("utf-8"))
+
+    def log_message(self, format, *args):
+        pass
