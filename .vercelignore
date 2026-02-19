@@ -1,5 +1,0 @@
-.vercel_python_packages
-.vitepress/cache
-.vitepress_bak
-node_modules
-*.log
