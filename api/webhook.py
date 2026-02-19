@@ -1,10 +1,11 @@
 """
 webhook.py - Vercel Serverless Function
-企业微信消息回调入口，使用 BaseHTTPRequestHandler 格式
+企业微信消息回调，使用被动回复 XML 模式
 """
 
 import os
 import sys
+import time
 import xml.etree.ElementTree as ET
 from http.server import BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
@@ -22,24 +23,17 @@ WX_AES_KEY  = os.environ.get("WXWORK_AES_KEY", "")
 crypt = WXBizMsgCrypt(WX_TOKEN, WX_AES_KEY, CORP_ID)
 
 
-def get_access_token() -> str:
-    import requests
-    url = f"https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid={CORP_ID}&corpsecret={CORP_SECRET}"
-    resp = requests.get(url, timeout=10)
-    return resp.json()["access_token"]
-
-
-def send_message(to_user: str, content: str):
-    import requests
-    token = get_access_token()
-    url = f"https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token={token}"
-    payload = {
-        "touser": to_user,
-        "msgtype": "text",
-        "agentid": int(AGENT_ID),
-        "text": {"content": content},
-    }
-    requests.post(url, json=payload, timeout=15)
+def make_text_reply(to_user: str, from_user: str, content: str) -> str:
+    """构造被动回复的明文 XML"""
+    return (
+        f"<xml>"
+        f"<ToUserName><![CDATA[{to_user}]]></ToUserName>"
+        f"<FromUserName><![CDATA[{from_user}]]></FromUserName>"
+        f"<CreateTime>{int(time.time())}</CreateTime>"
+        f"<MsgType><![CDATA[text]]></MsgType>"
+        f"<Content><![CDATA[{content}]]></Content>"
+        f"</xml>"
+    )
 
 
 def parse_xml(xml_str: str) -> dict:
@@ -86,15 +80,28 @@ class handler(BaseHTTPRequestHandler):
         msg     = parse_xml(xml_str)
 
         if msg.get("MsgType") == "text":
-            user_id  = msg.get("FromUserName", "")
-            question = msg.get("Content", "").strip()
-            answer   = rag_query(question)
-            send_message(user_id, answer)
+            user_id    = msg.get("FromUserName", "")
+            to_user    = msg.get("ToUserName", "")
+            question   = msg.get("Content", "").strip()
 
-        self._respond(200, "success")
+            # RAG 查询
+            answer = rag_query(question)
 
-    def _respond(self, code: int, body: str):
+            # 构造加密被动回复
+            reply_xml  = make_text_reply(user_id, to_user, answer)
+            encrypted_reply = crypt.encrypt(reply_xml)
+            response_xml    = crypt.make_reply_xml(
+                encrypted_reply,
+                str(int(time.time())),
+                nonce
+            )
+            self._respond(200, response_xml, content_type="application/xml")
+        else:
+            self._respond(200, "success")
+
+    def _respond(self, code: int, body: str, content_type: str = "text/plain"):
         self.send_response(code)
+        self.send_header("Content-Type", content_type)
         self.end_headers()
         self.wfile.write(body.encode("utf-8"))
 
