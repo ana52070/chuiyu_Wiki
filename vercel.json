@@ -1,0 +1,10 @@
+{
+  "buildCommand": "npm run docs:build",
+  "outputDirectory": ".vitepress/dist",
+  "rewrites": [
+    {
+      "source": "/api/webhook",
+      "destination": "https://chuiyu-bot.vercel.app/api/webhook"
+    }
+  ]
+}
