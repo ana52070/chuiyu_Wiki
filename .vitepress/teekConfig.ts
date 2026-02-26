@@ -35,6 +35,10 @@ export const teekConfig = defineTeekConfig({
     copyright: { createYear: 2026, suffix: "Chuiyu Wiki" },
   },
 
+  docAnalysis: {
+    createTime: "2026-02-03T00:00:00+08:00",
+  },
+
   // 核心插件配置（自动生成分类和侧边栏）
   vitePlugins: {
     sidebar: true,
