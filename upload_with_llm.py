@@ -2,9 +2,9 @@ import os
 import subprocess
 import sys
 import datetime
-import requests
 import math
 from dotenv import load_dotenv
+from openai import OpenAI
 
 # 加载 .env 环境变量
 load_dotenv()
@@ -16,8 +16,16 @@ REMOTE_REPO = "origin"
 BRANCH = "main"
 
 # LLM 配置
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
-OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "google/gemini-2.0-flash-lite-preview-02-05:free")
+LLM_API_KEY = os.getenv("LLM_API_KEY")
+LLM_BASE_URL = os.getenv("LLM_BASE_URL")
+LLM_MODEL = os.getenv("LLM_MODEL")
+
+if not LLM_API_KEY:
+    print("Error: LLM_API_KEY not found in .env.")
+    print("Please set LLM_API_KEY, LLM_BASE_URL, LLM_MODEL in .env.")
+    sys.exit(1)
+
+client = OpenAI(api_key=LLM_API_KEY, base_url=LLM_BASE_URL)
 
 # Token 限制配置
 MAX_TOTAL_CHARS = 4000  # 发送给 LLM 的最大字符数
@@ -31,16 +39,6 @@ TEXT_EXTENSIONS = {
     '.sh', '.bat', '.gitignore'           # 其他文本
 }
 # ===========================================
-
-def get_proxy_config():
-    """生成 requests 库需要的代理字典"""
-    if PROXY_PORT:
-        proxy_url = f"http://127.0.0.1:{PROXY_PORT}"
-        return {
-            "http": proxy_url,
-            "https": proxy_url
-        }
-    return None
 
 def run_command(command, use_proxy=False, return_output=False):
     """运行系统命令，支持代理设置，强制使用UTF-8编码处理输出"""
@@ -182,61 +180,41 @@ def get_smart_diff():
     return final_output
 
 def generate_commit_message(diff_content):
-    """调用 OpenRouter API 生成 Commit Message"""
-    if not OPENROUTER_API_KEY:
-        print("⚠️ 未检测到 OPENROUTER_API_KEY，将使用默认时间戳信息。")
-        return None
+    """Call ModelScope (OpenAI-compatible) API to generate Commit Message"""
+    print("Requesting LLM to generate commit message...")
 
-    print("🤖 正在请求 LLM 生成提交描述...")
-
-    headers = {
-        "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-        "Content-Type": "application/json",
-        "HTTP-Referer": "http://localhost", 
-    }
-
-    # 提示词工程优化：告知 AI 输入包含摘要和截断内容
     system_prompt = (
-        "你是一个代码知识库的维护专家。请根据提供的 git diff 内容生成一个 Commit Message。\n"
-        "**输入说明**：\n"
-        "- 输入可能包含具体的代码/文档变更。\n"
-        "- 输入可能包含 `[Resource Updated] filename`，这表示图片或二进制文件发生了变化。\n"
-        "- 部分长文件可能被中间截断，请基于可见部分推断整体意图。\n\n"
-        "**输出要求**：\n"
-        "1. **格式**：遵循 Conventional Commits (例如: `docs: 更新部署指南`, `feat: 添加自动同步脚本`, `assets: 上传架构图`)。\n"
-        "2. **语言**：中文。\n"
-        "3. **策略**：\n"
-        "   - 如果主要是文档修改，重点描述修改了什么知识点。\n"
-        "   - 如果添加了图片/资源，请在描述中顺带提及（如：`docs: 补充网络拓扑图及相关说明`）。\n"
-        "   - 即使有多个文件变化，也请总结为一个精炼的一句话标题，不要使用 Markdown 代码块。"
+        "You are a codebase maintainer. Generate a Commit Message based on the provided git diff.\n"
+        "**Input Notes**:\n"
+        "- The input may include code/doc changes.\n"
+        "- The input may include `[Resource Updated] filename` for binary assets.\n"
+        "- Long files may be truncated; infer intent from visible parts.\n\n"
+        "**Output Requirements**:\n"
+        "1. **Format**: Conventional Commits (e.g., `docs: update deploy guide`, `feat: add sync script`, `assets: add architecture image`).\n"
+        "2. **Language**: Chinese.\n"
+        "3. **Strategy**:\n"
+        "   - If mainly docs, describe the updated knowledge points.\n"
+        "   - If assets were added, mention them.\n"
+        "   - Summarize into a single concise line; no Markdown code blocks."
     )
 
-    data = {
-        "model": OPENROUTER_MODEL,
-        "messages": [
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": f"Git Changes Summary:\n{diff_content}"}
-        ]
-    }
-
     try:
-        response = requests.post(
-            "https://openrouter.ai/api/v1/chat/completions",
-            json=data,
-            headers=headers,
-            proxies=get_proxy_config(), 
-            timeout=30 
+        response = client.chat.completions.create(
+            model=LLM_MODEL,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": f"Git Changes Summary:\n{diff_content}"}
+            ],
+            temperature=0.7,
         )
-        response.raise_for_status()
-        result = response.json()
-        
-        message = result['choices'][0]['message']['content'].strip()
+
+        message = response.choices[0].message.content.strip()
         message = message.replace('`', '').strip('"').strip("'")
-        print(f"✨ LLM 生成建议: {message}")
+        print(f"LLM suggestion: {message}")
         return message
 
     except Exception as e:
-        print(f"⚠️ LLM 生成失败: {e}")
+        print(f"LLM request failed: {e}")
         return None
 
 def git_sync():
