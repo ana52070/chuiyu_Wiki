@@ -5,6 +5,10 @@
     {
       "source": "/api/webhook",
       "destination": "https://chuiyu-bot.vercel.app/api/webhook"
+    },
+    {
+      "source": "/api/webhookforchuiyuai",
+      "destination": "https://chuiyu-ai.vercel.app/api/webhook"
     }
   ]
 }
