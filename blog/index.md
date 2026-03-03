@@ -34,6 +34,8 @@ permalink: /pages/d81aa7
     全流程实战指南：涵盖自定义数据集准备、YoloV8模型训练及在RK3588平台上的最终部署。
 *   **[VScode使用AI编程教程](./ai/VScode使用AI编程教程.md)**
     在VSCode中安装与配置CodeGeex插件，利用AI辅助代码编写、自动注释生成及智能问答。
+*   **[在国内网络环境下给OpenClaw运行环境配置全局代理](./ai/在国内网络环境下给OpenClaw运行环境配置全局代理.md)**
+    记录在 Ubuntu 上为 OpenClaw（含 systemd / systemd --user 服务）配置 HTTP/HTTPS 全局代理的步骤，解决外网访问问题。
 *   **[Pytorch 手动安装教程 【超快|适用于国内没有源的方法】](./yolo/Pytorch_手动安装教程_【超快适用于国内没有源的方法】.md)**
     针对国内源缺失旧版本问题，提供利用P2P下载加速手动安装PyTorch的高效方法。
 
