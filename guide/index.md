@@ -226,9 +226,9 @@ ROS2 Humble 版本的学习笔记，包含 CLI 工具使用与客户端开发基
     自动驾驶小车规划控制项目概览。
 *   **[1. TODO清单](./大车-CarPlanning/1.TODO清单.md)**  
     项目开发阶段规划，涵盖仿真环境搭建、传感器改装及 LIO-SAM 适配任务。
-*   **[2. 第一阶段 车辆与物理环境](./大车-CarPlanning/2.第一阶段%20车辆与物理环境.md)**  
+*   **[2. 第一阶段 车辆与物理环境](./大车-CarPlanning/旧2.第一阶段%20车辆与物理环境.md)**  
     搭建 Audibot 阿克曼转向车模及 Gazebo 仿真环境，验证 TF 树结构。
-*   **[3. 第二阶段 LIO-SAM 适配](./大车-CarPlanning/3.第二阶段%20LIO-SAM%20适配.md)**  
+*   **[3. 第二阶段 LIO-SAM 适配](./大车-CarPlanning/旧3.第二阶段%20LIO-SAM%20适配.md)**  
     编译配置 LIO-SAM 算法与 GTSAM 库，适配 Mid-360 雷达与 IMU 数据融合。
 
 ### Linux 系统裁剪
