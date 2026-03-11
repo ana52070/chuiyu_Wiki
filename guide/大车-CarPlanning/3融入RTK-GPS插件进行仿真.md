@@ -58,7 +58,7 @@ cp /opt/ros/humble/share/turtlebot3_gazebo/urdf/turtlebot3_waffle.urdf \
    ~/carplaning/nav_ws/src/campus_nav/urdf/
 ```
 
-用 Python 脚本在 </robot> 前插入 GPS 内容（不能用 cat >> 追加，会破坏 XML 结构）：
+用 Python 脚本在 &lt;/robot&gt; 前插入 GPS 内容（不能用 cat >> 追加，会破坏 XML 结构）：
 
 ```bash
 cd ~/carplaning/nav_ws/src/campus_nav/urdf/
