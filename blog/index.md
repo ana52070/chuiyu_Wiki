@@ -16,6 +16,7 @@ permalink: /pages/d81aa7
 ### 人工智能与应用
 
 - [codex的使用笔记及心得](./ai/codex的使用笔记及心得.md)：介绍如何配置 AGENTS.md 文件让 Codex 永久使用简体中文回复，提升 AI 编程体验。
+- [OpenClaw CLI 命令行上手与常用命令速查](./ai/OpenClaw_CLI_命令行上手与常用命令速查.md)：从安装、onboard、gateway/daemon、skills、dashboard、logs/doctor 到常见排障的命令行速查，适合快速上手与复习。
 - [FunASR语音转文字本地部署、API接口教程](/blog/ai/FunASR语音转文字本地部署、API接口教程)：阿里开源 FunASR 语音识别模型的 Python 本地部署与环境配置指南。
 - [OpenClaw部署后权限配置与安全加固教程](./ai/OpenClaw部署后权限配置与安全加固教程.md)：详解 OpenClaw 部署后的安全策略，涵盖文件权限、消息入口及命令执行审批等关键配置。
 - [RK3588部署melo TTS模型附带NPU加速](/pages/aaf782)：在 RK3588 开发板上部署 MeloTTS 语音合成模型，利用 NPU 加速实现约 5 倍速推理。
