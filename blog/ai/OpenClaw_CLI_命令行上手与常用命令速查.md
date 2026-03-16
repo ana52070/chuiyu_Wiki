@@ -1,4 +1,11 @@
-# OpenClaw CLI 命令行上手与常用命令速查（Mac / Linux）
+---
+author: lunar
+date: 2026-03-16
+description: OpenClaw_CLI_命令行上手与常用命令速查
+tags:
+  - ai
+---
+
 
 > 参考来源：Kerry Zheng 的学习笔记《openclaw_command_tutorial》
 > <https://github.com/Formyselfonly/openclaw_command_tutorial>

@@ -1,5 +1,5 @@
 ---
-author: chuiyu
+author: lunar
 date: 2026-03-04
 description: 在国内网络环境下给 OpenClaw 运行环境配置全局代理（HTTP/HTTPS + systemd）
 tags:

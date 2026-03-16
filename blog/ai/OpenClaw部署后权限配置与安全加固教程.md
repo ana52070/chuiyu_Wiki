@@ -1,5 +1,5 @@
 ---
-author: chuiyu
+author: lunar
 date: 2026-03-04
 description: OpenClaw 部署完成后的权限配置与安全加固：从最小权限、消息入口、Gateway 暴露、节点配对到命令执行审批
 tags:
