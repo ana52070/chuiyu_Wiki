@@ -18,6 +18,16 @@ tags:
 
 文末我会把用到的资料来源列出来，方便你对照。
 
+
+另外，你也可以通过观看B站视频来跟着操作，或者学习一些有关于ai coding等一系列知识。
+【8分钟带你快速部署Claude Code(大学生向)】 https://www.bilibili.com/video/BV1SiA1zKEgS/?share_source=copy_web&vd_source=800b0cce2dee97823e91fad6181bdec5
+
+【免费Claude Code，免费模型有满血版几成功力？ Claude Code高热度AI编程工具】 https://www.bilibili.com/video/BV1jGtEzNEAv/?share_source=copy_web&vd_source=800b0cce2dee97823e91fad6181bdec5
+
+【最火AI编程Claude Code详细攻略，一期视频精通】 https://www.bilibili.com/video/BV1XGbazvEuh/?share_source=copy_web&vd_source=800b0cce2dee97823e91fad6181bdec5
+
+
+
 # 1. 什么是 Claude Code
 
 一句话：**Claude Code 是一个“跑在你电脑终端里的编程助手”。**
