@@ -337,6 +337,8 @@ nano ~/.claude/settings.json
 ```
 
 3. 写入类似这样的配置（把 `YOUR_API_KEY` 换成你自己的）：
+>Tips
+>APIkey即是需要去各大厂商的coding plan套餐中任意选购其中一款即可
 
 ```json
 {
