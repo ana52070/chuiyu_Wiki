@@ -1,8 +1,13 @@
 ---
+title: claude code +AI coding plan
 author: lunar
-date: 2026-03-16
+date: 2026-03-16 08:00:00
 description: claude code +AI coding plan
 tags:
+  - ai
+permalink: /pages/b8d11f
+categories:
+  - blog
   - ai
 ---
 

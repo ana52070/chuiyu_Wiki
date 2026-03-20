@@ -1,8 +1,13 @@
 ---
+title: codex的使用笔记及心得
 author: chuiyu
-date: 2026-02-26
+date: 2026-02-26 08:00:00
 description: codex的使用笔记及心得
 tags:
+  - ai
+permalink: /pages/d509f7
+categories:
+  - blog
   - ai
 ---
 ## 设置中文回复

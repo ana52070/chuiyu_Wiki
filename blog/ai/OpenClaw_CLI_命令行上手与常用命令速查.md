@@ -1,8 +1,13 @@
 ---
+title: OpenClaw_CLI_命令行上手与常用命令速查
 author: lunar
-date: 2026-03-16
+date: 2026-03-16 08:00:00
 description: OpenClaw_CLI_命令行上手与常用命令速查
 tags:
+  - ai
+permalink: /pages/d8451b
+categories:
+  - blog
   - ai
 ---
 

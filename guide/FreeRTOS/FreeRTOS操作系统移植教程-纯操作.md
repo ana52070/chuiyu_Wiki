@@ -1,10 +1,15 @@
 ---
+title: FreeRTOS操作系统移植教程-纯操作
 author: chuiyu
-date: 2026-03-19
+date: 2026-03-19 08:00:00
 description: FreeRTOS操作系统移植教程-纯操作
 tags:
   - STM32单片机
   - 单片机
+permalink: /pages/c77b78
+categories:
+  - guide
+  - FreeRTOS
 ---
 
 ## 1.准备资料

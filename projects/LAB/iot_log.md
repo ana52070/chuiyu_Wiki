@@ -1,3 +1,11 @@
+---
+date: 2026-03-08 21:34:54
+title: iot_log
+permalink: /pages/2e2d66
+categories:
+  - projects
+  - LAB
+---
 # IOT / 实验室事件日志
 
 > 说明：这里记录实验室/IOT 相关的事件、任务、风险与备注。需要强制记录/不记录时，可在聊天里用 [IOT]/[NOIOT] 标记。

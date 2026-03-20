@@ -1,4 +1,7 @@
 import Teek from "vitepress-theme-teek";
+import { h } from "vue";
+import BannerVideoMount from "./components/BannerVideoMount.vue";
+import "./styles/video-banner.css";
 
 // 尝试这种更通用的路径引入方式
 import "vitepress-theme-teek/index.css"; 
@@ -19,7 +22,10 @@ import "vitepress-theme-teek/tk-plus/fade-up-animation.scss";
 
 export default {
   extends: Teek,
-  Layout: Teek.Layout,
+  Layout: () =>
+    h(Teek.Layout, null, {
+      "teek-home-banner-before": () => h(BannerVideoMount)
+    }),
   enhanceApp({ app, router, siteData }) {
     Teek.enhanceApp({ app, router, siteData });
   }

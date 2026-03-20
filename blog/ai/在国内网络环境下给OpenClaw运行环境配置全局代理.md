@@ -1,12 +1,17 @@
 ---
+title: 在国内网络环境下给OpenClaw运行环境配置全局代理
 author: lunar
-date: 2026-03-04
+date: 2026-03-04 08:00:00
 description: 在国内网络环境下给 OpenClaw 运行环境配置全局代理（HTTP/HTTPS + systemd）
 tags:
   - ai
   - openclaw
   - linux
   - proxy
+permalink: /pages/31a76d
+categories:
+  - blog
+  - ai
 ---
 
 # 在国内网络环境下给 OpenClaw 运行环境配置全局代理
