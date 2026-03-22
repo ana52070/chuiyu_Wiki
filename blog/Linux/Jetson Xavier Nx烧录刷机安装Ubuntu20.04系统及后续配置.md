@@ -160,6 +160,68 @@ cd rootOnNVMe
 
 ![系统迁移到 SSD 后的状态](/blog/Linux/assets/jetson-xavier-nx-ubuntu20-04/09-root-on-nvme.jpg)
 
+### 4.1 实测补充：新 NVMe 没有分区时，直接迁移可能失败
+
+你这边实测踩到了一个很关键的坑：**如果 NVMe 是新盘，还没有做任何分区，直接跑 `copy-rootfs-ssd.sh` 可能会失败。**
+
+现象通常是这样：
+
+- 前面的 `mount` 就已经报错
+- NVMe 挂载后还是空的
+- `service` 没装上
+- 最终系统没有成功迁移到 NVMe
+
+本质上就是：**目标盘还没有可用分区和文件系统，脚本自然没法把根文件系统复制进去。**
+
+这种情况下，可以手动做一遍：先分区、再格式化、再挂载、再用 `rsync` 同步根文件系统，最后再执行 `setup-service.sh`。
+
+#### 第一步：分区并格式化 NVMe
+
+```bash
+# 1. 分区 + 格式化
+sudo parted /dev/nvme0n1 mklabel gpt
+sudo parted /dev/nvme0n1 mkpart primary ext4 0% 100%
+sudo mkfs.ext4 /dev/nvme0n1p1
+```
+
+#### 第二步：挂载并复制根文件系统
+
+```bash
+# 2. 挂载并复制根文件系统
+sudo mount /dev/nvme0n1p1 /mnt
+sudo rsync -axHAWX --numeric-ids --info=progress2 --exclude={"/dev/","/proc/","/sys/","/tmp/","/run/","/mnt/","/media/","/lost+found"} / /mnt/
+```
+
+#### 第三步：确认复制成功
+
+```bash
+ls /mnt/etc /mnt/usr /mnt/bin
+```
+
+`rsync` 会跑几分钟，等它执行完成，并且确认 `/mnt` 下已经有完整的系统目录后，再继续执行：
+
+```bash
+cd ~/rootOnNVMe
+./setup-service.sh
+sudo reboot
+```
+
+这段补充很重要，尤其适合下面这种场景：
+
+- 刚换的新 NVMe
+- 盘里还是空白状态
+- 没有现成分区
+- 原教程里的自动脚本一步没走通
+
+如果你后面再折腾别的 Jetson 板子，碰到“脚本跑了但盘里还是空的”这种情况，优先先检查：
+
+```bash
+lsblk
+sudo fdisk -l
+```
+
+先确认目标盘是不是已经真的有分区、有文件系统，再继续迁移，不然很容易白跑一遍。
+
 ## 5. 后续基础配置
 
 ### 5.1 中文语言与中文输入法
