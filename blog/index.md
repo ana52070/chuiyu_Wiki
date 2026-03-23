@@ -15,6 +15,7 @@ permalink: /pages/d81aa7
 
 ### 🤖 AI 与大模型应用
 
+- [Claude Code 从入门到生产：一文讲透安装、使用、MCP、SubAgent、Plugin 的实战指南](/pages/ea15bf)：完整转载并整理 Claude Code 实战指南，覆盖安装、终端交互、上下文管理、MCP、SubAgent、Plugin 等从入门到接近生产的完整路径。
 - [claude code +AI coding plan](/pages/b8d11f)：介绍 Claude Code 终端编程助手的功能定位、基础用法及配合 Coding Plan 的工作流配置。
 - [OpenClaw_CLI_命令行上手与常用命令速查](/pages/d8451b)：OpenClaw AI Agent Runtime 的快速上手指南，涵盖 CLI 安装与核心概念解析。
 - [OpenClaw部署后权限配置与安全加固教程](/pages/2a0f3e)：OpenClaw 部署后的安全加固指南，涵盖文件权限、服务暴露防护及命令执行审批策略。
