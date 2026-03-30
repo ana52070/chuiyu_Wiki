@@ -86,7 +86,7 @@ def get_smart_diff():
     1. 获取所有变动文件列表。
     2. 如果是白名单文件，读取 git diff 内容。
     3. 如果是资源文件，只记录文件名。
-    4. 执行“保小压大”的截断策略。
+    4. 执行"保小压大"的截断策略。
     """
     # 获取暂存区的文件列表
     file_list_str = run_command("git diff --cached --name-only", return_output=True)
@@ -107,6 +107,8 @@ def get_smart_diff():
         if ext in TEXT_EXTENSIONS:
             # 读取具体代码差异
             diff_content = run_command(f'git diff --cached "{file_path}"', return_output=True)
+            if not diff_content:
+                diff_content = f"[Changed] {file_path}"
             processed_diffs.append({
                 "type": "text",
                 "path": file_path,
@@ -123,6 +125,10 @@ def get_smart_diff():
                 "length": len(msg)
             })
 
+    # 没有任何有效文件时提前返回
+    if not processed_diffs:
+        return None
+
     # 2. 智能截断逻辑 (Dynamic Average Truncation)
     total_len = sum(d['length'] for d in processed_diffs)
     
@@ -132,15 +138,12 @@ def get_smart_diff():
     else:
         print(f"⚠️ Diff 总长 ({total_len}) 超过限制 ({MAX_TOTAL_CHARS})，执行智能压缩...")
         
-        # 计算所有资源文件和“小改动”文本文件的总占用
-        # 理论平均值 = 总限额 / 文件数
         avg_quota = MAX_TOTAL_CHARS / len(processed_diffs)
         
         small_files = []
         large_files = []
         used_quota = 0
         
-        # 分类：小文件 vs 大文件
         for d in processed_diffs:
             if d['length'] <= avg_quota:
                 small_files.append(d)
@@ -148,23 +151,17 @@ def get_smart_diff():
             else:
                 large_files.append(d)
 
-        # 计算剩余给大文件的额度
         remaining_quota = MAX_TOTAL_CHARS - used_quota
-        # 避免剩余额度为负数（极端情况）
         remaining_quota = max(remaining_quota, len(large_files) * 100) 
         
-        # 大文件平均配额
         large_file_quota = int(remaining_quota / len(large_files)) if large_files else 0
         
         final_parts = []
         
-        # 添加小文件（完整）
         for d in small_files:
             final_parts.append(d['content'])
             
-        # 添加大文件（截断）
         for d in large_files:
-            # 保留头部和尾部，中间截断，效果通常比只留头部好
             half_quota = int(large_file_quota / 2) - 20
             content = d['content']
             truncated_content = (
