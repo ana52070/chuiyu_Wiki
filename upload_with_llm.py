@@ -205,15 +205,24 @@ def generate_commit_message(diff_content):
             temperature=0.7,
         )
 
-        message = response.choices[0].message.content.strip()
-        message = message.replace('`', '').strip('"').strip("'")
+        if not response or not response.choices:
+            print("LLM returned empty response.")
+            return None
+
+        content = response.choices[0].message.content
+        if not content:
+            print("LLM returned empty content.")
+            return None
+
+        message = content.strip().replace('`', '').strip('"').strip("'")
         print(f"LLM suggestion: {message}")
         return message
 
     except Exception as e:
         print(f"LLM request failed: {e}")
         return None
-
+    
+    
 def git_sync():
     print("🚀 开始同步知识库...")
     
