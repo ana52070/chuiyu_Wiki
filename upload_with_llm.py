@@ -205,6 +205,8 @@ def generate_commit_message(diff_content):
             temperature=0.7,
         )
 
+        print(f"DEBUG response: {response}")  # 加这一行
+
         if not response or not response.choices:
             print("LLM returned empty response.")
             return None
@@ -222,7 +224,7 @@ def generate_commit_message(diff_content):
         print(f"LLM request failed: {e}")
         return None
     
-    
+
 def git_sync():
     print("🚀 开始同步知识库...")
     
