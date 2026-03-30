@@ -64,14 +64,12 @@ IP 配好以后，启动刚刚下载的 Mid360 上位机，把通信地址切换
 
 安装 SDK 时，最实用的做法就是直接用你发来的这份本地包，不再额外去 GitHub 拉一份。为了后面操作统一，我已经把它整理到了 workspace 下面：
 
-```text
-/home/ubuntu/.openclaw/workspace/vendor/mid360_humble_sdk/Livox_SDK2
-```
 
 在 **Ubuntu 22.04 + ROS2 Humble** 下，直接按下面这组命令装就行：
 
 ```bash
-cd /home/ubuntu/.openclaw/workspace/vendor/mid360_humble_sdk/Livox_SDK2
+#准备Livox_SDK2这个SDK
+cd Livox_SDK2
 mkdir -p build
 cd build
 cmake ..
@@ -85,17 +83,16 @@ sudo make install
 
 接下来就进入 ROS2 这一侧了。这里的核心工作是获取 `livox_ros_driver2`，按官方说明编译，然后修改配置文件，让它知道应该去接哪一台 Mid360。
 
-这一步我也建议直接用你发来的本地驱动包，不再额外 clone 官方仓库。我已经把它整理到了：
 
-```text
-/home/ubuntu/.openclaw/workspace/vendor/mid360_humble_sdk/livox_ros_driver2
+```bash
+#准备livox_ros_driver2这个SDK
 ```
 
 这份驱动自带 `build.sh`，而且 README 里明确给了 **Humble** 的编译方式，所以直接照它这套来最省事。建议把它放进你的 Humble 工作空间，例如：
 
 ```bash
 mkdir -p ~/ws_livox/src
-cp -r /home/ubuntu/.openclaw/workspace/vendor/mid360_humble_sdk/livox_ros_driver2 ~/ws_livox/src/
+cp -r /home/ubuntu/livox_ros_driver2 ~/ws_livox/src/
 cd ~/ws_livox/src/livox_ros_driver2
 source /opt/ros/humble/setup.bash
 ./build.sh humble
@@ -110,7 +107,7 @@ source /opt/ros/humble/setup.bash
 如果你后面发现驱动进程已经起来，但 RViz 里就是没有点云，第一优先检查的也不是 Fast-LIO，而是这里的配置文件。你这份驱动包里已经自带了现成的 Mid360 配置：
 
 ```text
-/home/ubuntu/.openclaw/workspace/vendor/mid360_humble_sdk/livox_ros_driver2/config/MID360_config.json
+/mid360_humble_sdk/livox_ros_driver2/config/MID360_config.json
 ```
 
 里面默认能看到这些关键值：
