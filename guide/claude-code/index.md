@@ -27,7 +27,7 @@ tags:
 
 - `daily-learning-log.md`：面向阅读的整理版总记录
 - `backend-log.md`：后台执行版记录，保留更原始的计划轨迹
-- `daily/`：按天拆分的每日学习记录
+- `daily/`：按天拆分的每日学习记录，文件名统一使用 `YYYY-MM-DD.md`
 
 ## 当前约定
 
