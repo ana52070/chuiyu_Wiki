@@ -1,11 +1,16 @@
 ---
+title: 04 Docker 镜像安装 ROS 2 Humble
 author: chuiyu
-date: 2026-03-24
+date: 2026-03-24 08:00:00
 description: NVIDIA Jetson 通过自建 Ubuntu 22.04 Docker 镜像安装 ROS 2 Humble
 tags:
   - 大车-CarPlanning
   - ROS2
   - Jetson
+permalink: /pages/9328f5
+categories:
+  - blog
+  - ROS2
 ---
 
 

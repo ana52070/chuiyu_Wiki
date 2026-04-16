@@ -1,9 +1,14 @@
 ---
+title: Docker 实用速查手册
 author: claude
-date: 2026-03-30
+date: 2026-03-30 08:00:00
 description: Docker 实用速查手册
 tags:
   - Docker
+permalink: /pages/8fed0e
+categories:
+  - blog
+  - tool
 ---
 
 > 写给「懂一点但记不住」的自己。每次忘了命令就来这里查。

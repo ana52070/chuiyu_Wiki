@@ -1,12 +1,17 @@
 ---
+title: index
 author: lunar
-date: 2026-04-02
+date: 2026-04-02 08:00:00
 description: Claude Code 每晚微学习计划首页，记录学习方式、文件结构与同步规则。
 tags:
   - claude code
   - ai coding
   - learning
   - guide
+permalink: /pages/d459b0
+categories:
+  - guide
+  - claude-code
 ---
 
 # Claude Code 每晚微学习

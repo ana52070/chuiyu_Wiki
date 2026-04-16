@@ -1,11 +1,16 @@
 ---
+title: daily-learning-log
 author: lunar
-date: 2026-04-08
+date: 2026-04-08 08:00:00
 description: Claude Code 每晚微学习总索引。
 tags:
   - claude code
   - learning
   - daily learning
+permalink: /pages/b380b9
+categories:
+  - guide
+  - claude-code
 ---
 
 # Claude Code 每晚微学习总索引

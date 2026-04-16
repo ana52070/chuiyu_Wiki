@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "echarts": "^6.0.0",
+    "feed": "^5.2.0",
     "vitepress-theme-teek": "^1.5.4"
   }
 }

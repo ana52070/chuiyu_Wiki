@@ -1,11 +1,16 @@
 ---
+title: backend-log
 author: lunar
-date: 2026-04-08
+date: 2026-04-08 08:00:00
 description: Claude Code 每晚微学习后台执行记录。
 tags:
   - claude code
   - backend
   - learning plan
+permalink: /pages/c8bed0
+categories:
+  - guide
+  - claude-code
 ---
 
 # Claude Code 每晚微学习后台记录

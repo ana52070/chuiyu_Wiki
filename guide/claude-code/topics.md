@@ -1,11 +1,16 @@
 ---
+title: topics
 author: lunar
-date: 2026-04-08
+date: 2026-04-08 08:00:00
 description: Claude Code 学习主题总览。
 tags:
   - claude code
   - topics
   - learning
+permalink: /pages/528f8a
+categories:
+  - guide
+  - claude-code
 ---
 
 # Claude Code 学习主题总览

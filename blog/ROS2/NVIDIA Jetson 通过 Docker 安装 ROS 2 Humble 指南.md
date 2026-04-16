@@ -1,11 +1,16 @@
 ---
+title: NVIDIA Jetson 通过 Docker 安装 ROS 2 Humble 指南
 author: chuiyu
-date: 2026-03-22
+date: 2026-03-22 08:00:00
 description: NVIDIA Jetson 通过 Docker 安装 ROS 2 Humble 指南
 tags:
   - 大车-CarPlanning
   - ROS2
   - Linux
+permalink: /pages/dab894
+categories:
+  - blog
+  - ROS2
 ---
 
 

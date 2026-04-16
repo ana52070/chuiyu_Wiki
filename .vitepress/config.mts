@@ -1,12 +1,17 @@
 import { defineConfig } from "vitepress";
 import { teekConfig } from "./teekConfig";
+import { generateRSS } from "./rss";
 
 export default defineConfig({
   extends: teekConfig, // 关键：继承 teek 的配置
+  buildEnd: generateRSS,
   title: "Chuiyu Wiki",
   description: "要努力去发光,而不是被照亮",
   lang: "zh-CN",
   cleanUrls: false,
+  head: [
+    ['link', { rel: 'alternate', type: 'application/rss+xml', title: 'Chuiyu Wiki RSS', href: 'https://chuiyu.wiki/rss.xml' }],
+  ],
   themeConfig: {
     logo: "/logo.jpg",
     // 导航栏配置

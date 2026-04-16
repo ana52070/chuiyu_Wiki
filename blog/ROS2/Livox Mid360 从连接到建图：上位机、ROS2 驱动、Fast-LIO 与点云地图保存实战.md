@@ -1,8 +1,11 @@
 ---
 title: Livox Mid360 从连接到建图：上位机、ROS2 驱动、Fast-LIO 与点云地图保存实战
 author: lunar
-date: 2026-03-30
-description: 基于一段 Mid360 实操视频整理出的一篇上手教程，覆盖上位机连接、网口 IP 配置、Livox SDK2、livox_ros_driver2、Fast-LIO 建图以及 PCD 地图保存流程，文章按 Ubuntu 22.04 + ROS2 Humble 和本地实际 SDK/驱动包整理。
+date: 2026-03-30 08:00:00
+description: >-
+  基于一段 Mid360 实操视频整理出的一篇上手教程，覆盖上位机连接、网口 IP 配置、Livox
+  SDK2、livox_ros_driver2、Fast-LIO 建图以及 PCD 地图保存流程，文章按 Ubuntu 22.04 + ROS2 Humble
+  和本地实际 SDK/驱动包整理。
 tags:
   - Livox
   - Mid360
@@ -12,6 +15,10 @@ tags:
   - 激光雷达
   - 点云
   - SLAM
+permalink: /pages/9e1c83
+categories:
+  - blog
+  - ROS2
 ---
 
 很多人第一次拿到 Livox Mid360，最容易卡住的不是算法，而是最前面的那几步：设备怎么接、网口 IP 怎么配、上位机为什么看不到回传、驱动装完为什么 RViz 里没有点云。等这些基础链路都跑通以后，后面的 Fast-LIO 建图、PCD 地图保存，其实反而顺了不少。
