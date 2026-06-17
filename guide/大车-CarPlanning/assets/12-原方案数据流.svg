@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="730" viewBox="0 0 920 730" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#475569"/>
+    </marker>
+    <style>
+      .title{font-size:23px;font-weight:700;fill:#0f172a}
+      .sub{font-size:13px;fill:#64748b}
+      .chip{font-size:13px;font-weight:700;fill:#ffffff}
+      .box{font-size:15px;font-weight:600;fill:#0f172a}
+      .note{font-size:12px;fill:#475569}
+      .flow{stroke:#475569;stroke-width:2;fill:none}
+    </style>
+  </defs>
+
+  <rect width="920" height="730" fill="#ffffff"/>
+  <text x="460" y="38" text-anchor="middle" class="title">校园智巡 · 当前方案数据流（魔改 Nav2 + EKF + RTK + 3D LiDAR）</text>
+  <text x="460" y="60" text-anchor="middle" class="sub">琥珀色 = 当前已暴露的痛点：① 3D 点云被压扁为 2D　② 实车 map 严重漂移</text>
+
+  <!-- column headers -->
+  <rect x="55" y="80" width="120" height="26" rx="13" fill="#3b82f6"/>
+  <text x="115" y="98" text-anchor="middle" class="chip">定位链路</text>
+  <rect x="510" y="80" width="120" height="26" rx="13" fill="#6366f1"/>
+  <text x="570" y="98" text-anchor="middle" class="chip">感知链路</text>
+
+  <!-- ===== 左：定位链路 ===== -->
+  <rect x="55" y="120" width="175" height="58" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="142" y="145" text-anchor="middle" class="box">UM982 RTK GPS</text>
+  <text x="142" y="165" text-anchor="middle" class="note">/gps/fix + 航向角</text>
+
+  <rect x="250" y="120" width="175" height="58" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="337" y="145" text-anchor="middle" class="box">轮式里程计</text>
+  <text x="337" y="165" text-anchor="middle" class="note">编码器 /odom</text>
+
+  <line x1="142" y1="178" x2="190" y2="222" class="flow" marker-end="url(#arr)"/>
+  <line x1="337" y1="178" x2="290" y2="222" class="flow" marker-end="url(#arr)"/>
+
+  <!-- EKF (痛点②) -->
+  <rect x="90" y="226" width="300" height="70" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="240" y="252" text-anchor="middle" class="box">robot_localization EKF + navsat_transform</text>
+  <text x="240" y="272" text-anchor="middle" class="note">融合 RTK 与轮式里程计 → map→odom TF / 位姿</text>
+  <text x="240" y="289" text-anchor="middle" class="note" fill="#b45309">⚠ 实车 map 严重漂移（根因待确诊）</text>
+
+  <!-- ===== 右：感知链路 ===== -->
+  <rect x="510" y="120" width="320" height="58" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="670" y="145" text-anchor="middle" class="box">Livox Mid-360（3D 点云 + IMU）</text>
+  <text x="670" y="165" text-anchor="middle" class="note">/livox/lidar（PointCloud2）</text>
+  <line x1="670" y1="178" x2="670" y2="222" class="flow" marker-end="url(#arr)"/>
+
+  <!-- p2l (痛点①) -->
+  <rect x="510" y="226" width="320" height="70" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="670" y="256" text-anchor="middle" class="box">pointcloud_to_laserscan</text>
+  <text x="670" y="278" text-anchor="middle" class="note" fill="#b45309">⚠ 3D 点云压扁为 2D /scan（丢失台阶 / 低矮 / 立体障碍）</text>
+  <line x1="670" y1="296" x2="670" y2="332" class="flow" marker-end="url(#arr)"/>
+
+  <rect x="540" y="336" width="260" height="54" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="670" y="361" text-anchor="middle" class="box">Nav2 Costmap</text>
+  <text x="670" y="379" text-anchor="middle" class="note">2D 障碍代价层</text>
+
+  <!-- ===== 合流：规划 → 控制 ===== -->
+  <rect x="370" y="430" width="180" height="26" rx="13" fill="#0d9488"/>
+  <text x="460" y="448" text-anchor="middle" class="chip">规划 → 控制</text>
+
+  <!-- 合流箭头 -->
+  <polyline points="240,296 240,408 380,408 380,470" class="flow" marker-end="url(#arr)"/>
+  <polyline points="670,390 670,408 540,408 540,470" class="flow" marker-end="url(#arr)"/>
+
+  <rect x="300" y="474" width="320" height="66" rx="10" fill="#cffafe" stroke="#06b6d4" stroke-width="1.5"/>
+  <text x="460" y="500" text-anchor="middle" class="box">Nav2 规划层</text>
+  <text x="460" y="521" text-anchor="middle" class="note">全局规划 + 局部规划（DWB / MPPI）→ /cmd_vel</text>
+  <line x1="460" y1="540" x2="460" y2="572" class="flow" marker-end="url(#arr)"/>
+
+  <rect x="340" y="576" width="240" height="52" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="460" y="608" text-anchor="middle" class="box">STM32 下层控制板</text>
+  <line x1="460" y1="628" x2="460" y2="660" class="flow" marker-end="url(#arr)"/>
+
+  <rect x="340" y="664" width="240" height="52" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="460" y="696" text-anchor="middle" class="box">差速底盘电机 × 4</text>
+
+  <!-- legend -->
+  <rect x="690" y="470" width="16" height="16" rx="3" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="714" y="483" font-size="12" fill="#475569">= 当前痛点</text>
+  <rect x="690" y="496" width="16" height="16" rx="3" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="714" y="509" font-size="12" fill="#475569">= 已就绪模块</text>
+</svg>
