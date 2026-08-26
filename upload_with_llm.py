@@ -11,7 +11,7 @@ load_dotenv()
 
 # ================= 配置区域 =================
 # 代理端口 (Clash常见端口 7890/7897)
-PROXY_PORT = "7897" 
+PROXY_PORT = "7896" 
 REMOTE_REPO = "origin"
 BRANCH = "main"
 
