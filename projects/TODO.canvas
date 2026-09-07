@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"29568ce9f9447b52","type":"group","x":-100,"y":-380,"width":290,"height":400,"color":"2","label":"TODO"},
+		{"id":"50f7e6f11571c58e","type":"group","x":300,"y":-380,"width":290,"height":400,"color":"3","label":"DOING"},
+		{"id":"31c4cae8f0cc609f","type":"group","x":700,"y":-380,"width":290,"height":400,"color":"4","label":"FINISH"},
+		{"id":"cc1c24795843f7eb","type":"text","text":"毕设-选题","x":-80,"y":-360,"width":250,"height":60},
+		{"id":"9dd0c062d73ee2a9","type":"text","text":"大车-推进","x":-80,"y":-260,"width":250,"height":60},
+		{"id":"fbbc4cc3003b8eae","type":"text","text":"cpp学习-[CPP-TODOLIST](guide/cpp/CPP-TODOLIST.canvas)","x":320,"y":-360,"width":250,"height":60},
+		{"id":"1fe9b2709a03c286","type":"text","text":"CET4-学习","x":-80,"y":-160,"width":250,"height":60},
+		{"id":"b90f36f0761ec7ba","type":"text","text":"复盘先进成图和TI会-260916","x":-80,"y":-60,"width":250,"height":60}
+	],
+	"edges":[]
+}
