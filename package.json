@@ -5,10 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run check:frontmatter && npm run docs:build",
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "check:frontmatter": "node scripts/check-frontmatter.mjs",
+    "check:images": "node scripts/check-images.mjs"
   },
   "keywords": [],
   "author": "",
